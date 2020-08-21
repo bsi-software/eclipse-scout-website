@@ -17,7 +17,8 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -48,6 +49,7 @@
 
   </header>
 
+  <!-- **** INTRO **** -->
   <div id="intro-panel">
     <img id="intro-image" src="img/eclipse-scout-screen01.png">
     <div id="intro-text-box">
@@ -56,6 +58,7 @@
     </div>
   </div>
 
+  <!-- **** FEATURES **** -->
   <div id="features-panel">
     <h2>Features and Highlights</h2>
     <p>Open source, Web framework, mature, hundreds commercial projects, one stop framework, active development / community</p>
@@ -106,6 +109,12 @@
       </div>
     </div>
 
+    <!-- **** DEMO-APPS **** -->
+    <div id="demo-apps-panel">
+      <h2>Demo Apps</h2>
+
+    </div>
+
   </div>
 
   <footer>
@@ -132,6 +141,15 @@
 </div>
 
 
+<script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000
+  };
+</script>
+<script src="node_modules/less/dist/less.js" type="text/javascript"></script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>

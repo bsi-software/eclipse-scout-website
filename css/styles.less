@@ -1,0 +1,203 @@
+/*
+ * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
+ * http://www.bsiag.com/
+ */
+@import "normalize.css";
+@import "main.css";
+
+@palette-white: #fff;
+@palette-blue: #014786;
+@palette-gray: #666;
+@palette-light-gray: #E5E5E5;
+
+#title-font() {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 53px;
+  color: @palette-blue;
+}
+/* ==========================================================================
+   Website styles.
+   ========================================================================== */
+
+body {
+  margin-top: 0;
+  font-family: "Dax OT", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  background-color: @palette-light-gray;
+}
+
+#wrapper {
+  max-width: 1400px;
+  margin: auto;
+  background-color: @palette-white;
+}
+
+header {
+  display: flex;
+  padding: 50px 60px;
+}
+
+#eclipse-scout-logo > img {
+  max-width: 280px;
+}
+
+#scout-version-button {
+  background: @palette-white;
+  border: 2px solid @palette-blue;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  padding: 2px;
+
+  font-size: 15px;
+  line-height: 30px;
+}
+
+#get-started-button {
+  background-color: @palette-blue;
+  color: @palette-white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 25px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#main-navigation {
+  display: flex;
+  flex-grow: 4;
+}
+
+.navigation-item-lv1 {
+  font-size: 24px;
+  margin: 0 20px;
+}
+
+footer {
+  background: radial-gradient(50% 338.62% at 70.42% 50%, #333333 0%, rgba(51, 51, 51, 0.87) 100%);
+  color: @palette-white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer > nav > a,
+footer > nav > a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: @palette-white;
+}
+
+#copyright {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#social-media-bar > a {
+  margin: 0 10px;
+}
+
+#social-media-bar > a > img {
+  max-width: 42px;
+}
+
+#eclipse-navigation-bar > a {
+  margin: 0 20px;
+}
+
+/* CONTENT */
+#intro-panel {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
+#intro-image {
+  max-width: 720px;
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.3));
+  border-radius: 13px;
+}
+
+#intro-text-box {
+  margin-left: 40px;
+}
+
+#intro-text-box > h1 {
+  color: @palette-blue;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 70px;
+}
+
+#intro-text-box > p {
+  font-size: 36px;
+}
+
+#features-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E9F0F6 43.23%);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#features-panel > h2 {
+  color: @palette-blue;
+  margin: 10px 0;
+  text-align: center;
+  #title-font();
+}
+
+#features-panel > p {
+  margin: auto;
+  width: 50%;
+  font-size: 20px;
+}
+
+.features-grid {
+  margin: auto;
+  display: table;
+  width: 75%;
+}
+
+.features-grid-row {
+  display: table-row;
+}
+
+.features-grid-row.first > .features-grid-tile {
+  border-bottom: solid 1px @palette-gray;
+  margin-bottom: 15px;
+}
+
+.features-grid-tile {
+  text-align: center;
+  padding: 10px;
+  display: table-cell;
+  width: 33.33%;
+}
+
+.features-grid-tile:not(.last) {
+  border-right: solid 1px @palette-gray;
+}
+
+.features-grid-tile > img {
+  max-width: 70px;
+}
+
+.features-grid-tile > h3 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.features-grid-tile > p {
+  font-size: 18px;
+}
+
+#demo-apps-panel > h2 {
+  #title-font();
+}
