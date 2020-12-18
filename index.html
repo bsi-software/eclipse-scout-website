@@ -108,11 +108,95 @@
 
       </div>
     </div>
+  </div>
 
-    <!-- **** DEMO-APPS **** -->
-    <div id="demo-apps-panel">
-      <h2>Demo Apps</h2>
+  <!-- **** DEMO-APPS **** -->
+  <div id="demo-apps-panel">
+    <h2>Scout Demo Apps</h2>
 
+    <div id="demo-apps-navigation">
+
+      <div class="line-with-dots"></div>
+
+      <div class="demo-apps-buttons">
+
+        <div class="demo-app-button-column first">
+          <div class="demo-app-button active" data-show-container="contacts">
+            <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
+              <g transform="translate(-33.866667,-212.25784)">
+                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+              </g>
+            </svg>
+            <div class="demo-app-button-label">
+              Contacts
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-app-button-column">
+          <div class="demo-app-button" data-show-container="scout-classic-widgets">
+            <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
+              <g transform="translate(-33.866667,-212.25784)">
+                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+              </g>
+            </svg>
+            <div class="demo-app-button-label">
+              Scout Classic<br/>Widgets
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-app-button-column last">
+          <div class="demo-app-button" data-show-container="scout-js-widgets">
+            <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
+              <g transform="translate(-33.866667,-212.25784)">
+                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+              </g>
+            </svg>
+            <div class="demo-app-button-label">
+              Scout JS<br/>Widgets
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Contacts -->
+    <div class="demo-app-container" id="contacts">
+      <div class="demo-app-description">
+        <h3>Contacts</h3>
+        <p>Choose your favorite language to develop with Scout</p>
+        <a href="#" class="see-more-link">See more</a>
+      </div>
+      <div class="demo-app-image">
+        <a href="#"><img src="img/demo-app-preview.png"></a>
+      </div>
+    </div>
+
+    <!-- Scout Classic Widgets -->
+    <div class="demo-app-container hidden" id="scout-classic-widgets">
+      <div class="demo-app-description">
+        <h3>Scout Classic Widgets</h3>
+        <p>Choose your favorite language to develop with Scout</p>
+        <a href="#" class="see-more-link">See more</a>
+      </div>
+      <div class="demo-app-image">
+        <a href="#"><img src="img/demo-app-preview.png"></a>
+      </div>
+    </div>
+
+    <!-- Scout JS Widgets -->
+    <div class="demo-app-container hidden" id="scout-js-widgets">
+      <div class="demo-app-description">
+        <h3>Scout JS Widgets</h3>
+        <p>Choose your favorite language to develop with Scout</p>
+        <a href="#" class="see-more-link">See more</a>
+      </div>
+      <div class="demo-app-image">
+        <a href="#"><img src="img/demo-app-preview.png"></a>
+      </div>
     </div>
 
   </div>
@@ -151,6 +235,7 @@
 </script>
 <script src="node_modules/less/dist/less.js" type="text/javascript"></script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/vendor/jquery-3.5.1.slim.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
