@@ -33,54 +33,57 @@
     </div>
 
     <nav id="main-navigation">
-      <div class="navigation-item-lv1">Tutorial</div>
+      <div class="navigation-item-lv1 first">Tutorial</div>
       <div class="navigation-item-lv1">Docs</div>
       <div class="navigation-item-lv1">Community</div>
-      <div class="navigation-item-lv1">About</div>
+      <div class="navigation-item-lv1 last">About</div>
     </nav>
 
     <div id="scout-version-button">
-      v10.0
+      <div>v11</div>
     </div>
 
-    <button id="get-started-button">
-      Get Started
-    </button>
+    <button id="get-started-button">Get Started</button>
 
   </header>
 
   <!-- **** INTRO **** -->
   <div id="intro-panel">
-    <img id="intro-image" src="img/eclipse-scout-screen01.png">
-    <div id="intro-text-box">
+    <div class="intro-column first">
+      <img src="img/eclipse-scout-screen01.png">
+    </div>
+    <div class="intro-column last">
       <h1>Business Applications Made Easy</h1>
-      <p>Eclipse Scout is all you need to develop professional software.</p>
+      <!--<p>Eclipse Scout is all you need to develop professional software.</p> -->
+      <p>Eclipse Scout is a one-stop framework giving you a strong application model and a versatile UI.
+        Enabling you to develop professional software in Java or JavaScript.</p>
     </div>
   </div>
 
   <!-- **** FEATURES **** -->
   <div id="features-panel">
     <h2>Features and Highlights</h2>
-    <p>Open source, Web framework, mature, hundreds commercial projects, one stop framework, active development / community</p>
+    <p>Open source, Web framework, mature, hundreds commercial projects, one stop framework,
+      active development / community</p>
 
     <div class="features-grid">
       <div class="features-grid-row first">
 
         <div class="features-grid-tile">
-          <img src="img/paper-plane.svg">
-          <h3>Responsive UI</h3>
+          <img src="img/smartphone.svg">
+          <div>Responsive UI</div>
           <p>Build responsive applications for desktop and mobile devices</p>
         </div>
 
         <div class="features-grid-tile">
-          <img src="img/paper-plane.svg">
-          <h3>Powerful Widgets</h3>
+          <img src="img/html5-rendering.svg">
+          <div>Powerful Widgets</div>
           <p>Scout provides a mature widget library to build beautiful and stable web based user interfaces</p>
         </div>
 
         <div class="features-grid-tile last">
-          <img src="img/paper-plane.svg">
-          <h3>Web Toolstack</h3>
+          <img src="img/lego-bricks.svg">
+          <div>Web Toolstack</div>
           <p>Modern web toolstack with ES6+, Webpack and Babel</p>
         </div>
 
@@ -89,20 +92,20 @@
       <div class="features-grid-row">
 
         <div class="features-grid-tile">
-          <img src="img/paper-plane.svg">
-          <h3>Full Stack</h3>
+          <img src="img/lego-bricks.svg">
+          <div>Full Stack</div>
           <p>Use proved and tested tools to build front- and backend tiers</p>
         </div>
 
         <div class="features-grid-tile">
-          <img src="img/paper-plane.svg">
-          <h3>Comprehensive Tools</h3>
+          <img src="img/smartphone.svg">
+          <div>Comprehensive Tools</div>
           <p>Dependency management, i18n, Transaction handling, Testing, REST, Web Services, Authentication, Authorization...</p>
         </div>
 
         <div class="features-grid-tile last">
-          <img src="img/paper-plane.svg">
-          <h3>Java and JavaScript</h3>
+          <img src="img/html5-rendering.svg">
+          <div>Java and JavaScript</div>
           <p>Choose your favorite language to develop with Scout</p>
         </div>
 
@@ -119,12 +122,14 @@
       <div class="line-with-dots"></div>
 
       <div class="demo-apps-buttons">
-
         <div class="demo-app-button-column first">
           <div class="demo-app-button active" data-show-container="contacts">
             <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
               <g transform="translate(-33.866667,-212.25784)">
-                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+                <g transform="translate(-56.189735,-0.88388348)">
+                  <circle class="outer-circle" cx="115.0564" cy="238.14172" r="25" />
+                  <circle class="inner-circle" cx="115.0564" cy="238.14172" r="5" />
+                </g>
               </g>
             </svg>
             <div class="demo-app-button-label">
@@ -137,7 +142,10 @@
           <div class="demo-app-button" data-show-container="scout-classic-widgets">
             <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
               <g transform="translate(-33.866667,-212.25784)">
-                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+                <g transform="translate(-56.189735,-0.88388348)">
+                  <circle class="outer-circle" cx="115.0564" cy="238.14172" r="25" />
+                  <circle class="inner-circle" cx="115.0564" cy="238.14172" r="5" />
+                </g>
               </g>
             </svg>
             <div class="demo-app-button-label">
@@ -150,7 +158,10 @@
           <div class="demo-app-button" data-show-container="scout-js-widgets">
             <svg class="demo-app-button-donut" viewBox="0 0 50 50" height="50" width="50">
               <g transform="translate(-33.866667,-212.25784)">
-                <path d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z" />
+                <g transform="translate(-56.189735,-0.88388348)">
+                  <circle class="outer-circle" cx="115.0564" cy="238.14172" r="25" />
+                  <circle class="inner-circle" cx="115.0564" cy="238.14172" r="5" />
+                </g>
               </g>
             </svg>
             <div class="demo-app-button-label">
@@ -158,44 +169,42 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <!-- Contacts -->
     <div class="demo-app-container" id="contacts">
       <div class="demo-app-description">
-        <h3>Contacts</h3>
-        <p>Choose your favorite language to develop with Scout</p>
+        <div>Contacts</div>
+        <p>This lean business application written in Scout Classic, features patterns and best practices used in Scout applications.</p>
         <a href="#" class="see-more-link">See more</a>
       </div>
       <div class="demo-app-image">
-        <a href="#"><img src="img/demo-app-preview.png"></a>
+        <a href="#"><img src="img/demo-app-contacts-preview.jpg"></a>
       </div>
     </div>
 
     <!-- Scout Classic Widgets -->
     <div class="demo-app-container hidden" id="scout-classic-widgets">
       <div class="demo-app-description">
-        <h3>Scout Classic Widgets</h3>
-        <p>Choose your favorite language to develop with Scout</p>
+        <div>Scout Classic Widgets</div>
+        <p>A Java application featuring all available widgets in Scout Classic.</p>
         <a href="#" class="see-more-link">See more</a>
       </div>
       <div class="demo-app-image">
-        <a href="#"><img src="img/demo-app-preview.png"></a>
+        <a href="#"><img src="img/demo-app-scout-js-preview.jpg"></a>
       </div>
     </div>
 
     <!-- Scout JS Widgets -->
     <div class="demo-app-container hidden" id="scout-js-widgets">
       <div class="demo-app-description">
-        <h3>Scout JS Widgets</h3>
-        <p>Choose your favorite language to develop with Scout</p>
+        <div>Scout JS Widgets</div>
+        <p>A JavaScript application featuring all available widgets in Scout JS.</p>
         <a href="#" class="see-more-link">See more</a>
       </div>
       <div class="demo-app-image">
-        <a href="#"><img src="img/demo-app-preview.png"></a>
+        <a href="#"><img src="img/demo-app-scout-classic-preview.jpg"></a>
       </div>
     </div>
 
@@ -205,7 +214,7 @@
   <div id="getting-started-panel">
     <div id="getting-started-panel-columns">
       <div class="getting-started-column first">
-        <h3>For Java Developers</h3>
+        <h3>Java Developers</h3>
         <p>Learn how to build a Scout Classic application written in Java
           with a server side application model.</p>
         <a href="#" class="getting-started-link">Get started</a>
@@ -216,8 +225,8 @@
       </div>
 
       <div class="getting-started-column last">
-        <h3>For JavaScript Developers</h3>
-        <p>Learn how to build a Scout JS application written in JavaScript.</p>
+        <h3>JavaScript Developers</h3>
+        <p>Learn how to build a Scout JS application written in JavaScript.<br/><br/></p>
         <a href="#" class="getting-started-link">Get started</a>
       </div>
     </div>
@@ -250,21 +259,21 @@
   <footer>
 
     <div id="social-media-bar">
-      <a href="#" title="Eclipse Scout Blog RSS Feed"><img src="img/rss.svg"></a>
-      <a href="#" title="GitHub"><img src="img/github.svg"></a>
-      <a href="#" title="StackOverflow"><img src="img/stack-overflow.svg"></a>
+      <a href="#" title="Eclipse Scout Blog RSS Feed"><img src="img/rss.svg" id="rss-icon"></a>
+      <a href="#" title="GitHub"><img src="img/github.svg" id="github-icon"></a>
+      <a href="#" title="StackOverflow"><img src="img/stack-overflow.svg" id="stack-overflow-icon"></a>
     </div>
 
     <div id="copyright">
-      &copy; 2020 BSI Business Systems Integration AG
+      &copy; 2020 <a href="https://www.bsi-software.com" target="_blank">BSI Software AG</a>
     </div>
 
     <nav id="eclipse-navigation-bar">
-      <a href="#">Eclipse Home</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Copyright Agent</a>
-      <a href="#">Legal</a>
+      <a href="#" target="_blank">Eclipse Home</a>
+      <a href="#" target="_blank">Privacy Policy</a>
+      <a href="#" target="_blank">Terms of Use</a>
+      <a href="#" target="_blank">Copyright Agent</a>
+      <a href="#" target="_blank">Legal</a>
     </nav>
 
   </footer>

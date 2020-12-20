@@ -56,10 +56,23 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-33.866667,-212.25784)">
-    <path
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55000007;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 58.866754,212.25763 a 25.000037,25.000037 0 0 0 -25.000086,25.0001 25.000037,25.000037 0 0 0 25.000086,25.00011 25.000037,25.000037 0 0 0 24.999915,-25.00011 25.000037,25.000037 0 0 0 -24.999915,-25.0001 z m 0,20.07787 a 4.9222873,4.9222873 0 0 1 4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922237,4.92223 4.9222873,4.9222873 0 0 1 -4.922412,-4.92223 4.9222873,4.9222873 0 0 1 4.922412,-4.92223 z"
-       id="path837-4"
-       inkscape:connector-curvature="0" />
+    <g
+       id="g2073"
+       transform="translate(-56.189735,-0.88388348)">
+      <circle
+         r="25"
+         cy="238.14172"
+         cx="115.0564"
+         id="path2054"
+         style="opacity:1;fill:#333333;fill-opacity:1;stroke:none;stroke-width:2.07874012;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         inkscape:transform-center-y="-3.9275923"
+         inkscape:transform-center-x="-9.0028288"
+         r="5.0494871"
+         cy="238.14172"
+         cx="115.0564"
+         id="path2054-6"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.07874012;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

@@ -12,7 +12,15 @@ function onDemoAppButtonClick() {
   $('#' + showContainerId).removeClass('hidden');
 }
 
+function onGetStartedButtonClick() {
+  $('#getting-started-panel')[0].scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
 function installHandlers() {
+  $('#get-started-button').on('click', onGetStartedButtonClick);
+
   $('.demo-app-button').on('click', onDemoAppButtonClick);
 }
 
