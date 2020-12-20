@@ -93,12 +93,12 @@ textarea {
 
 /*
  * Hide visually and from screen readers
- */
-
+ * BSI Patch: commented out, unwanted style in combination with animations
 .hidden,
 [hidden] {
   display: none !important;
 }
+ */
 
 /*
  * Hide only visually, but have it available for screen readers:

@@ -85,8 +85,12 @@ header {
   padding: 50px 60px;
 }
 
-#eclipse-scout-logo > img {
-  max-width: 220px;
+#eclipse-scout-logo  {
+  background-image: url('../img/eclipse-scout-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 6px;
+  width: 220px;
 }
 
 #scout-version-button {
@@ -338,8 +342,12 @@ footer {
     padding: 0 10px;
     background-color: @palette-white;
 
+    &:hover .outer-circle {
+      fill: @palette-orange;
+    }
     & .outer-circle {
       fill: @palette-black;
+      transition: fill 0.25s ease;
     }
     & .inner-circle {
       fill: @palette-white;
@@ -382,11 +390,19 @@ footer {
   }
 }
 
-.demo-app-container {
-  display: flex;
+#demo-app-container-wrapper {
+  position: relative;
+  height: 370px;
+}
 
-  & > .hidden {
-    display: none;
+.demo-app-container {
+  position: absolute;
+  display: flex;
+  opacity: 1;
+  transition: opacity 1s ease;
+
+  &.hidden {
+    opacity: 0;
   }
 }
 
@@ -477,5 +493,14 @@ footer {
   & > p {
     font-size: @font-size-larger;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  #eclipse-scout-logo {
+    background-image: url(http://127.0.0.1:8080/img/eclipse-scout-logo-only.png);
+    background-size: 36px;
+    background-position-y: 7px;
+    min-width: 36px;
   }
 }
