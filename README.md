@@ -1,9 +1,8 @@
 ## TODOs
-* Texte verbessern, Finale Texte bei Marketing bestellen
 * Review mit Claudio
+* Texte verbessern, Finale Texte bei Marketing bestellen
 * Highlight-Color definieren (Farbklecks fehlt)
 * Kleine (farbige) Animation für Raketentriebwerk
-* Raketen Icon zu dicke Linien
-* Alle Icons prüfen, ersetzen. Streamline Icons verwenden? Dünne Linien
-* Animationen definieren
+* Streamline-Icon Library, passende Icons auswählen
+* Animationen definieren, braucht es mehr?
 
