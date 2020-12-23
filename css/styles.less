@@ -146,27 +146,112 @@ header {
   }
 }
 
+/* ==== NAVIGATION ==== */
 #main-navigation {
   display: flex;
   flex-grow: 4;
 }
 
-.navigation-item-lv1 {
+.navigation-item {
   font-size: @font-size-larger;
-  margin: 8px 20px;
   cursor: pointer;
+  user-select: none;
 
-  &.first {
-    flex-grow: 1;
-    text-align: right;
+  /* ---- Level 1 ---- */
+  &.lv1 {
+    margin: 8px 20px;
+
+    &.first {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    &.last {
+      flex-grow: 1;
+    }
+
+    & > .text:hover {
+      color: orange;
+    }
   }
-  &.last {
-    flex-grow: 1;
-  }
-  &:hover {
-    color: orange;
+
+  /* ---- Level 2 ---- */
+  &.lv2 {
+    &:not(.last) {
+      margin-bottom: 15px;
+    }
+    & .title {
+      #title-font(@font-size-larger, @palette-black);
+      line-height: 24px;
+    }
+    & .text {
+      font-size: @font-size-medium;
+    }
+    &::before {
+      color: red;
+      content: ' ';
+      display: inline-block;
+      width: 38px;
+      height: 30px;
+      background-repeat: no-repeat;
+      vertical-align: top;
+      margin-top: 7px;
+    }
+
+    &:hover {
+      color: @palette-orange;
+      & .title {
+        color: @palette-orange;
+      }
+    }
   }
 }
+
+#icon-eclipse-scout-forum::before {
+  background-image: url('../img/cog.svg');
+  fill: currentColor;
+}
+
+#icon-stack-overflow::before {
+  background-image: url('../img/cog.svg');
+}
+
+#icon-git-hub::before {
+  background-image: url('../img/cog.svg');
+}
+
+#icon-bugzilla::before {
+  background-image: url('../img/cog.svg');
+}
+
+.navigation-item-container {
+  display: inline-block;
+}
+
+.navigation-popup {
+  position: absolute;
+  margin-left: -80px;
+  margin-top: 15px;
+  background-color: @palette-white;
+  padding: 20px 30px 20px 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: @border-radius-image;
+  border: solid 1px @palette-light-gray;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    top: -10px;
+    z-index: 0;
+    left: 127px;
+  }
+}
+
 
 /* ==== FOOTER ==== */
 footer {

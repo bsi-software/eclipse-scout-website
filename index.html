@@ -31,10 +31,39 @@
     <div id="eclipse-scout-logo"></div>
 
     <nav id="main-navigation">
-      <div class="navigation-item-lv1 first">Tutorial</div>
-      <div class="navigation-item-lv1">Docs</div>
-      <div class="navigation-item-lv1">Community</div>
-      <div class="navigation-item-lv1 last">About</div>
+      <div class="navigation-item lv1 first"><div class="text">Tutorial</div></div>
+      <div class="navigation-item lv1"><div class="text">Docs</div></div>
+      <div class="navigation-item lv1">
+        <div class="text">Community</div>
+        <div class="navigation-popup hidden">
+          <div class="navigation-item lv2 first" id="icon-eclipse-scout-forum">
+            <div class="navigation-item-container">
+              <div class="title">Eclipse Scout Forum</div>
+              <div class="text">Need help? Ask the experts</div>
+            </div>
+          </div>
+          <div class="navigation-item lv2" id="icon-stack-overflow">
+            <div class="navigation-item-container">
+              <div class="title">StackOverflow</div>
+              <div class="text">Another source for help</div>
+            </div>
+          </div>
+          <div class="navigation-item lv2" id="icon-git-hub">
+            <div class="navigation-item-container">
+              <div class="title">GitHub</div>
+              <div class="text">View source code. Contribute</div>
+            </div>
+          </div>
+          <div class="navigation-item lv2 last" id="icon-bugzilla">
+            <div class="navigation-item-container">
+              <div class="title">Bugzilla</div>
+              <div class="text">Report errors</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="navigation-item lv1 last"><div class="text">About</div></div>
     </nav>
 
     <div id="scout-version-button">
