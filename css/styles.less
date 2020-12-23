@@ -79,6 +79,25 @@ body {
   background-color: @palette-white;
 }
 
+/* ==== ANIMATIONS ==== */
+.animate-hide {
+  animation: fade-out 1s linear forwards;
+}
+
+.animate-show {
+  animation: fade-in 1s linear forwards;
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 /* ==== HEADER ==== */
 header {
   display: flex;
@@ -411,12 +430,6 @@ footer {
 .demo-app-container {
   position: absolute;
   display: flex;
-  opacity: 1;
-  transition: opacity 1s ease;
-
-  &.hidden {
-    opacity: 0;
-  }
 }
 
 .demo-app-image {
@@ -468,7 +481,7 @@ footer {
     margin-top: 0;
   }
 
-  & > .getting-started-link {
+  & > .get-started-link {
     #arrow-link(@palette-white, '../img/arrow-white.svg');
     font-size: @font-size-larger;
 
