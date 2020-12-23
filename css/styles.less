@@ -94,17 +94,18 @@ header {
 }
 
 #scout-version-button {
-  background-image: url('../img/version-circle.svg');
+  margin-top: 7px;
+  margin-right: 10px;
+  height: 36px;
+  min-width: 36px;
+  background-image: url('../img/scout-version-circle.svg');
   background-repeat: no-repeat;
-  height: 70px;
-  min-width: 70px;
-  margin-top: -8px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.4));
 
   & > div {
-    font-size: 18px;
+    margin-top: 7px;
+    font-size: @font-size-medium;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 3px;
   }
 }
 
@@ -305,13 +306,11 @@ footer {
 }
 
 .line-with-dots {
-  background-image: url(../img/4dots.norm.svg);
-  background-size: contain;
-  height: 8px;
-  padding: 1px 0;
-  position: relative;
-  top: 30px;
-  width: 90%;
+  background-image: url(../img/demo-app-dots.svg);
+  background-repeat: repeat-x;
+  height: 50px;
+  position: absolute;
+  width: 100%;
   margin: auto;
 }
 
@@ -341,27 +340,41 @@ footer {
   & > .demo-app-button-donut {
     padding: 0 10px;
     background-color: @palette-white;
-
-    &:hover .outer-circle {
-      fill: @palette-orange;
-    }
-    & .outer-circle {
+    & > .outer {
       fill: @palette-black;
       transition: fill 0.25s ease;
     }
-    & .inner-circle {
+    & > .inner {
       fill: @palette-white;
     }
   }
 
-  &.active > .demo-app-button-donut .outer-circle {
-    fill: @palette-blue;
+  & > .demo-app-button-label {
+    font-size: @font-size-larger;
+    text-align: center;
+    transition: color 0.25s ease;
   }
-}
 
-.demo-app-button-label {
-  font-size: @font-size-larger;
-  text-align: center;
+  &:hover:not(.active) {
+    & > .demo-app-button-label {
+      color: @palette-orange;
+    }
+    & > .demo-app-button-donut > .outer {
+      fill: @palette-orange;
+    }
+  }
+
+  &.active {
+    cursor: default;
+
+    & > .demo-app-button-donut > .outer {
+      fill: @palette-blue;
+    }
+    & > .demo-app-button-label {
+      color: @palette-blue;
+    }
+  }
+
 }
 
 .demo-app-description {

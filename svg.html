@@ -1,0 +1,41 @@
+<!--
+  ~ Copyright (c) BSI Business Systems Integration AG. All rights reserved.
+  ~ http://www.bsiag.com/
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+      .dropshadow {
+        filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.4));
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Version Circle -->
+    <svg height="36" width="36" class="dropshadow">
+      <circle cx="18" cy="18" r="17" stroke="#014786" stroke-width="2" fill="white" />
+    </svg>
+
+    <!-- Demo App Donut -->
+    <!-- Radius set to 24 instead of 25 to avoid browser cutting off parts of the circle
+         on some zoom levels -->
+    <svg height="50" width="50">
+      <circle cx="25" cy="25" r="24" fill="#014786" />
+      <circle cx="25" cy="25" r="5" fill="white" />
+    </svg>
+
+    <!-- Demo App Dots -->
+    <svg height="50" width="175">
+      <circle cx="25" cy="25" r="5" fill="#BBBBBB" />
+      <circle cx="55" cy="25" r="5" fill="#BBBBBB" />
+      <circle cx="85" cy="25" r="5" fill="#BBBBBB" />
+      <circle cx="115" cy="25" r="5" fill="#BBBBBB" />
+      <circle cx="145" cy="25" r="5" fill="#BBBBBB" />
+    </svg>
+
+  </body>
+</html>
