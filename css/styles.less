@@ -208,20 +208,20 @@ header {
 }
 
 #icon-eclipse-scout-forum::before {
-  background-image: url('../img/cog.svg');
+  background-image: url('../img/conversation-question-warning-1.svg');
   fill: currentColor;
 }
 
 #icon-stack-overflow::before {
-  background-image: url('../img/cog.svg');
+  background-image: url('../img/developer-community-stack-overflow.svg');
 }
 
 #icon-git-hub::before {
-  background-image: url('../img/cog.svg');
+  background-image: url('../img/developer-community-github-1.svg');
 }
 
 #icon-bugzilla::before {
-  background-image: url('../img/cog.svg');
+  background-image: url('../img/computer-bug.svg');
 }
 
 .navigation-item-container {
@@ -255,7 +255,7 @@ header {
 
 /* ==== FOOTER ==== */
 footer {
-  background: radial-gradient(50% 338.62% at 70.42% 50%, #333333 0%, rgba(51, 51, 51, 0.87) 100%);
+  background: radial-gradient(50% 340% at 70% 50%, @palette-black 0%, rgba(51, 51, 51, 0.87) 100%);
   color: @palette-white;
   padding: @vgap-medium 0 (@vgap-medium + @vgap-medium-center-offset) 0;
   font-size: @font-size-medium;
@@ -496,7 +496,7 @@ footer {
     margin-top: 0;
   }
 
-  & > .see-more-link {
+  & > .launch-app-link {
     #arrow-link(@palette-blue, '../img/arrow-blue.svg');
     font-size: @font-size-larger;
 
@@ -529,7 +529,7 @@ footer {
 
 /* ==== GETTING STARTED ==== */
 #getting-started-panel {
-  background: radial-gradient(50% 338.62% at 70.42% 50%, #333333 0%, rgba(51, 51, 51, 0.8) 100%);
+  background: radial-gradient(50% 340% at 70% 50%, @palette-black 0%, rgba(51, 51, 51, 0.8) 100%);
 }
 
 #getting-started-panel-columns {
@@ -547,10 +547,11 @@ footer {
   &.center {
     text-align: center;
     vertical-align: middle;
+    opacity: 0.85;
 
     & > img {
-      width: 42%;
-      margin-top: 45px;
+      width: 50%;
+      margin-top: 30px;
     }
   }
 

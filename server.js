@@ -13,6 +13,11 @@ app.locals = {
     version: 11
   },
   urls: {
+    bsi: {
+      appContacts: 'https://scout.bsi-software.com/contacts/',
+      appScoutJsWidgets: 'https://scout.bsi-software.com/jswidgets/',
+      appScoutClassicWidgets: 'https://scout.bsi-software.com/widgets/'
+    },
     eclipse: {
       home: 'http://www.eclipse.org/',
       privacyPolicy: 'http://www.eclipse.org/legal/privacy.php',
