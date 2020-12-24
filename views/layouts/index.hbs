@@ -26,11 +26,11 @@
 
     <div id="wrapper">
       <header>
-        <div id="eclipse-scout-logo"></div>
+        <a href="/" id="eclipse-scout-logo"></a>
 
         <nav id="main-navigation">
-          <div class="navigation-item lv1 first"><div class="text">Tutorial</div></div>
-          <div class="navigation-item lv1"><div class="text">Docs</div></div>
+          <div class="navigation-item lv1 first"><a href="#" class="text">Tutorial</a></div>
+          <div class="navigation-item lv1"><a href="#" class="text">Docs</a></div>
           <div class="navigation-item lv1">
             <div class="text">Community</div>
             <div class="navigation-popup hidden">
@@ -61,7 +61,7 @@
             </div>
 
           </div>
-          <div class="navigation-item lv1 last"><div class="text">About</div></div>
+          <div class="navigation-item lv1 last"><a href="about" class="text">About</a></div>
         </nav>
 
         <div id="scout-version-button">
@@ -72,203 +72,7 @@
 
       </header>
 
-      <!-- **** INTRO **** -->
-      <div id="intro-panel">
-        <div class="intro-column first">
-          <img src="img/eclipse-scout-screen01.png">
-        </div>
-        <div class="intro-column last">
-          <h1>Business Applications Made Easy</h1>
-          <!--<p>Eclipse Scout is all you need to develop professional software.</p> -->
-          <p>Eclipse Scout is a one-stop framework giving you a strong application model and a versatile UI.
-            Enabling you to develop professional software in Java or JavaScript.</p>
-        </div>
-      </div>
-
-      <!-- **** FEATURES **** -->
-      <div id="features-panel">
-        <h2><a id="features-and-highlights">Features and Highlights</a></h2>
-        <p>Open source, Web framework, mature, hundreds commercial projects, one stop framework,
-          active development / community</p>
-
-        <div class="features-grid">
-          <div class="features-grid-row first">
-
-            <div class="features-grid-tile">
-              <img src="img/responsive-design-1.svg">
-              <div>Responsive UI</div>
-              <p>Build responsive applications for desktop and mobile devices</p>
-            </div>
-
-            <div class="features-grid-tile">
-              <img src="img/analytics-graph-bar.svg">
-              <div>Powerful Widgets</div>
-              <p>Scout provides a mature widget library to build beautiful and stable web based user interfaces</p>
-            </div>
-
-            <div class="features-grid-tile last">
-              <img src="img/programming-browser.svg">
-              <div>Web Toolstack</div>
-              <p>Modern web toolstack with ES6+, Webpack and Babel</p>
-            </div>
-
-          </div>
-
-          <div class="features-grid-row">
-
-            <div class="features-grid-tile">
-              <img src="img/layers-stacked-1.svg">
-              <div>Full Stack</div>
-              <p>Use proved and tested tools to build front- and backend tiers</p>
-            </div>
-
-            <div class="features-grid-tile">
-              <img src="img/outdoors-swiss-knife.svg">
-              <div>Comprehensive Tools</div>
-              <p>Dependency management, i18n, Transaction handling, Testing, REST, Web Services, Authentication, Authorization...</p>
-            </div>
-
-            <div class="features-grid-tile last">
-              <img src="img/coffee-machine.svg">
-              <div>Java and JavaScript</div>
-              <p>Choose your favorite language to develop with Scout</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- **** DEMO-APPS **** -->
-      <div id="demo-apps-panel">
-        <h2><a id="demo-apps">Scout Demo Apps</a></h2>
-
-        <div id="demo-apps-navigation">
-
-          <div class="line-with-dots"></div>
-
-          <div class="demo-apps-buttons">
-            <div class="demo-app-button-column first">
-              <div class="demo-app-button active" data-show-container="contacts">
-                <svg class="demo-app-button-donut" height="50" width="50" viewBox="0 0 50 50">
-                  <circle class="outer" cx="25" cy="25" r="24" fill="#014786" />
-                  <circle class="inner" cx="25" cy="25" r="5" fill="white" />
-                </svg>
-                <div class="demo-app-button-label">
-                  Contacts
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-app-button-column">
-              <div class="demo-app-button" data-show-container="scout-classic-widgets">
-                <svg class="demo-app-button-donut" height="50" width="50" viewBox="0 0 50 50">
-                  <circle class="outer" cx="25" cy="25" r="24" fill="#014786" />
-                  <circle class="inner" cx="25" cy="25" r="5" fill="white" />
-                </svg>
-                <div class="demo-app-button-label">
-                  Scout Classic<br/>Widgets
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-app-button-column last">
-              <div class="demo-app-button" data-show-container="scout-js-widgets">
-                <svg class="demo-app-button-donut" height="50" width="50" viewBox="0 0 50 50">
-                  <circle class="outer" cx="25" cy="25" r="24" fill="#014786" />
-                  <circle class="inner" cx="25" cy="25" r="5" fill="white" />
-                </svg>
-                <div class="demo-app-button-label">
-                  Scout JS<br/>Widgets
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="demo-app-container-wrapper">
-          <!-- Contacts -->
-          <div class="demo-app-container" id="contacts">
-            <div class="demo-app-description">
-              <div>Contacts</div>
-              <p>This lean business application written in Scout Classic, features patterns and best practices used in Scout applications.</p>
-              <a href="{{urls.bsi.appContacts}}" target="_blank" class="launch-app-link">Launch app</a>
-            </div>
-            <div class="demo-app-image">
-              <a href="{{urls.bsi.appContacts}}" target="_blank"><img src="img/demo-app-contacts-preview.jpg"></a>
-            </div>
-          </div>
-
-          <!-- Scout Classic Widgets -->
-          <div class="demo-app-container hidden" id="scout-classic-widgets">
-            <div class="demo-app-description">
-              <div>Scout Classic Widgets</div>
-              <p>A Java application featuring all available widgets in Scout Classic.</p>
-              <a href="{{urls.bsi.appScoutClassicWidgets}}" target="_blank" class="launch-app-link">Launch app</a>
-            </div>
-            <div class="demo-app-image">
-              <a href="{{urls.bsi.appScoutClassicWidgets}}" target="_blank"><img src="img/demo-app-scout-js-preview.jpg"></a>
-            </div>
-          </div>
-
-          <!-- Scout JS Widgets -->
-          <div class="demo-app-container hidden" id="scout-js-widgets">
-            <div class="demo-app-description">
-              <div>Scout JS Widgets</div>
-              <p>A JavaScript application featuring all available widgets in Scout JS.</p>
-              <a href="{{urls.bsi.appScoutJsWidgets}}" target="_blank" class="launch-app-link">Launch app</a>
-            </div>
-            <div class="demo-app-image">
-              <a href="{{urls.bsi.appScoutJsWidgets}}" target="_blank"><img src="img/demo-app-scout-classic-preview.jpg"></a>
-            </div>
-          </div>
-        </div> <!-- EOF demo-apps-container-wrapper -->
-
-      </div>
-
-      <!-- **** GETTING STARTED **** -->
-      <div id="getting-started-panel">
-        <div id="getting-started-panel-columns">
-          <div class="getting-started-column first">
-            <h3><a id="getting-started-java">Java Developers</a></h3>
-            <p>Learn how to build a Scout Classic application written in Java
-              with a server side application model.</p>
-            <a href="#" class="get-started-link">Get started</a>
-          </div>
-
-          <div class="getting-started-column center">
-            <img src="img/space-rocket-flying.svg">
-          </div>
-
-          <div class="getting-started-column last">
-            <h3><a id="getting-started-javascript">JavaScript Developers</a></h3>
-            <p>Learn how to build a Scout JS application written in JavaScript.<br/><br/></p>
-            <a href="#" class="get-started-link">Get started</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- **** TRY SCOUT JS **** -->
-      <div id="try-scout-js-panel">
-
-        <div id="try-scout-js-columns">
-          <div class="try-scout-js-column first">
-            <h3><a id="try-scout-js">Try Scout JS</a></h3>
-            <p>Right here! Edit this CodePen and see how simple
-              it is to develop with Scout.</p>
-          </div>
-          <div class="try-scout-js-column last">
-            <p class="codepen" data-height="350" data-theme-id="dark" data-default-tab="css,result" data-user="rcyou" data-slug-hash="QEObEk"
-               style="height: 350px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-               data-pen-title="A Simple CodePen Example (feat. HTML, CSS, &amp;amp; JavaScript)">
-        <span>See the Pen <a href="https://codepen.io/rcyou/pen/QEObEk">
-        A Simple CodePen Example (feat. HTML, CSS, &amp; JavaScript)</a> by Ryan Young (<a href="https://codepen.io/rcyou">@rcyou</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
-
-      </div>
+      {{{body}}}
 
       <!-- **** FOOTER **** -->
       <footer>
