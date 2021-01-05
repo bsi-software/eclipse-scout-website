@@ -9,17 +9,12 @@
   "license": "",
   "author": "André Wegmüller, BSI",
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "dev:watch": "http-server -c-1",
+    "build": "echo \"Error: implement build\" && exit 1",
     "dev:server": "node server.js",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "http-server": "^0.12.3",
-    "less": "^3.12.2",
-    "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
     "express": "^4.17.1",
