@@ -53,6 +53,9 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', {layout: 'index'});
 });
+app.get('/versions', (req, res) => {
+  res.render('versions', {layout: 'index'});
+});
 
 // Launch Server
 app.listen(PORT, () => console.log(`App listening to port ${PORT}`));

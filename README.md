@@ -5,6 +5,12 @@
 
 ## TODOs
 * v11 auf https://eclipsescout.github.io/11.0/ verlinken
+  --> Ich finde es nicht unbedingt logisch, auf die Doc zu springen bei diesem
+      Link. Besser fände ich eine Tabelle mit allen Versionen (hatten wir das
+      nicht mal besprochen?) In dieser Tabelle hat man dann alle Links zu
+      einer Version: Sourcen, Download und Docs. Der Link springt dann zur
+      Zeile mit der entsprechenden Version. Könnte man ggf. auf einer Version
+      Seite unterbringen.
 * Nowrap bei Get Started Titel
 * DAX Ot als Webfont einbetten
 * Hover-Effekt für Features Grid --> probieren: Titel und Icon einfärben
