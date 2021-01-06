@@ -5,6 +5,8 @@
 @import "normalize.css";
 @import "main.css";
 
+/* ==== COLORS & SIZES ==== */
+
 // Colors
 @palette-white: #FFF;
 @palette-almost-white: #EEE;
@@ -38,7 +40,9 @@
 
 @sm-icon-size: 28px;
 
-// Mix-ins
+@tile-height: 200px;
+
+/* ==== MIX-INS ==== */
 #drop-shadow-soft() {
   filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.3));
 }
@@ -432,43 +436,64 @@ footer {
 
   &.first > .features-grid-tile {
     border-bottom: solid 1px @palette-gray;
-    padding-bottom: 15px;
   }
 
   &:not(.first) > .features-grid-tile {
-    padding-top: 25px;
+    padding-top: 10px;
   }
 }
 
 .features-grid-tile {
   text-align: center;
-  padding: 10px;
   display: table-cell;
+  padding: 5px;
   width: 33.33%;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:visited {
-    color: @palette-black;
-  }
 
   &:not(.last) {
     border-right: solid 1px @palette-gray;
   }
 
-  & > img {
-    max-width: 70px;
+  & > a {
+    display: block;
+    height: @tile-height;
+    padding: 10px;
+    border-radius: @border-radius-image;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:visited {
+      color: @palette-black;
+
+      & > div, p {
+        color: @palette-black;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+
+      & > div {
+        color: @palette-blue;
+      }
+    }
+
+    & > img {
+      max-width: 70px;
+    }
+
+    & > div {
+      #title-font(@font-size-larger, @palette-black);
+      margin: 15px 0 0 0;
+      color: @palette-black;
+    }
+
+    & > p {
+      font-size: @font-size-medium;
+      margin-top: 8px;
+      color: @palette-black;
+    }
   }
 
-  & > div {
-    #title-font(@font-size-larger, @palette-black);
-    margin: 15px 0 0 0;
-  }
-
-  & > p {
-    font-size: @font-size-medium;
-    margin-top: 8px;
-  }
 }
 
 /* ==== DEMO-APPS ==== */
