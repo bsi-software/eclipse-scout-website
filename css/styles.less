@@ -27,6 +27,7 @@
 @font-size-larger: 22px;
 @font-size-button: 19px;
 @font-size-medium: 16px;
+@font-size-small: 14px;
 
 @border-radius-image: 10px;
 
@@ -150,7 +151,7 @@ header {
 }
 
 #eclipse-scout-logo {
-  margin-top: 7px;
+  margin-top: 5px;
   white-space: nowrap;
 
   & > .logo {
@@ -175,38 +176,53 @@ header {
 }
 
 #scout-version-button {
-  margin-top: 7px;
+  margin-top: 6px;
   margin-right: 10px;
-  height: 36px;
-  min-width: 36px;
-  background-image: url('../img/scout-version-circle.svg');
-  background-repeat: no-repeat;
   text-decoration: none;
+  position: relative;
   #drop-shadow-hard();
 
   &:visited {
     color: @palette-black;
   }
 
+  &:hover {
+    & > div {
+      color: @palette-orange;
+    }
+    & > svg > circle {
+      stroke: @palette-orange;
+    }
+  }
+
+  & > svg > circle {
+    transition: stroke 0.2s ease;
+  }
+
   & > div {
-    margin-top: 7px;
+    position: absolute;
+    top: 8.5px;
+    left: 6px;
     font-size: @font-size-medium;
     text-align: center;
+    transition: color 0.2s ease;
   }
 }
 
 #get-started-button {
+  height: 36px;
+  margin-top: 7px;
+  padding: 9px 22px;
   background-color: @palette-blue;
   color: @palette-white;
   border: none;
   border-radius: 3px;
-  padding: 5px 22px;
   font-size: @font-size-button;
+  line-height: @font-size-button;
   text-transform: uppercase;
-  max-height: 36px;
-  margin-top: 7px;
   cursor: pointer;
   white-space: nowrap;
+  transition: background-color 0.2s ease;
 
   &:hover {
     background-color: @palette-orange;
@@ -227,8 +243,7 @@ header {
   & > a {
     text-decoration: none;
     &:visited {
-      color: @palette-black !important;
-      text-decoration-color: @palette-black !important;
+      color: @palette-black;
     }
   }
 
@@ -665,6 +680,9 @@ footer {
   & > h3 {
     #title-font(@font-size-h3, @palette-white);
     margin-bottom: @vgap-h3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   & > p {
@@ -926,6 +944,10 @@ footer {
 }
 
 /* ==== MEDIA QUERIES ==== */
+/* >= 1000px: desktop mode
+   >= 850 and < 1000px: make logo smaller, desktop or tablet mode
+   < 850px: mobile mode: re-order items, change navigation
+ */
 @media screen and (max-width: 999px) {
   #eclipse-scout-logo {
     margin-top: 5px;
@@ -938,6 +960,85 @@ footer {
     & > .text {
       opacity: 0;
       width: 0;
+    }
+  }
+
+  .intro-column.last {
+    & > h1 {
+      font-size: @font-size-h3;
+      line-height: calc(@font-size-h3 + 2px);
+    }
+    & > p {
+      font-size: @font-size-medium;
+    }
+  }
+
+  /* Features */
+  #features-panel {
+    & > h2 {
+      font-size: @font-size-larger;
+    }
+    & > p {
+      width: 60%;
+    }
+  }
+
+  .features-grid-tile {
+    & > a {
+      & > img {
+        max-width: 60px;
+      }
+      & > div {
+        font-size: @font-size-button;
+      }
+      & > p {
+        font-size: @font-size-small;
+      }
+    }
+  }
+
+  #demo-apps-panel > h2 {
+    font-size: @font-size-larger;
+  }
+
+  #demo-app-container-wrapper {
+    height: 280px;
+  }
+
+  .demo-app-button > .demo-app-button-label {
+    font-size: @font-size-medium;
+  }
+
+  .demo-app-description {
+    & > div {
+      font-size: @font-size-button;
+    }
+    & > p {
+      font-size: @font-size-small;
+    }
+    & > .launch-app-link {
+      font-size: @font-size-button;
+    }
+  }
+
+  .getting-started-column {
+    & > h3 {
+      font-size: @font-size-button;
+    }
+    & > p {
+      font-size: @font-size-small;
+    }
+    & > .get-started-link {
+      font-size: @font-size-button;
+    }
+  }
+
+  .try-scout-js-column {
+    & > h3 {
+      font-size: @font-size-button;
+    }
+    & > p {
+      font-size: @font-size-small;
     }
   }
 }

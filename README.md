@@ -4,7 +4,7 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* Nowrap bei Get Started Titel
+* JS-Error get-started-button wenn nicht auf start seite
 * Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
   bei Kacheln und anderen Texten. Eher mit.
@@ -13,6 +13,7 @@
 * Build implementieren, package.json aufräumen
 
 ### Erledigt
+* Nowrap bei Get Started Titel --> responsive-ness generell
 * Prüfen, ob das Copyright unten im Footer korrekt ist (Eclipse statt BSI?)
   --> alle Project pages (auch mit eigener Website) haben das Eclipse Copyright
 * Hover-Effekt für Features Grid --> probieren: Titel und Icon einfärben
