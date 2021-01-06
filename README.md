@@ -4,11 +4,8 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* Hover-Effekt für Features Grid --> probieren: Titel und Icon einfärben
-  oder 3D mässig hervorheben
 * Nowrap bei Get Started Titel
 * Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
-* Prüfen, ob das Copyright unten im Footer korrekt ist (Eclipse statt BSI?)
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
   bei Kacheln und anderen Texten. Eher mit.
 * Internet Explorer ggf. Error abfangen / Edge prüfen
@@ -16,6 +13,10 @@
 * Build implementieren, package.json aufräumen
 
 ### Erledigt
+* Prüfen, ob das Copyright unten im Footer korrekt ist (Eclipse statt BSI?)
+  --> alle Project pages (auch mit eigener Website) haben das Eclipse Copyright
+* Hover-Effekt für Features Grid --> probieren: Titel und Icon einfärben
+  oder 3D mässig hervorheben
 * DAX Ot als Webfont einbetten
 * v11 auf https://eclipsescout.github.io/11.0/ verlinken
   --> Ich finde es nicht unbedingt logisch, auf die Doc zu springen bei diesem

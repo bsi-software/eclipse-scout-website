@@ -18,7 +18,8 @@ app.locals = {
       home: 'https://scout.bsi-software.com/',
       appContacts: 'https://scout.bsi-software.com/contacts/',
       appScoutJsWidgets: 'https://scout.bsi-software.com/jswidgets/',
-      appScoutClassicWidgets: 'https://scout.bsi-software.com/widgets/'
+      appScoutClassicWidgets: 'https://scout.bsi-software.com/widgets/',
+      scoutBlog: 'https://www.bsi-software.com/en/scout-blog'
     },
     eclipse: {
       home: 'http://www.eclipse.org/',
@@ -27,7 +28,9 @@ app.locals = {
       copyrightAgent: 'http://www.eclipse.org/legal/copyright.php',
       legal: 'http://www.eclipse.org/legal',
       wikipedia: 'https://de.wikipedia.org/wiki/Eclipse_Foundation'
-    }
+    },
+    gitHub: 'https://github.com/eclipse/scout.rt',
+    stackOverflow: 'https://stackoverflow.com/tags/eclipse-scout'
   }
 };
 
