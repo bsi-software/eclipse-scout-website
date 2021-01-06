@@ -16,7 +16,7 @@
 @palette-blue: #014786;
 @palette-light-blue: #CBDEF0;
 @palette-orange: #FE9915;
-
+@palette-green: #1482A1;
 
 // Sizes
 @font-size-h1: 42px;
@@ -89,9 +89,25 @@
    Website styles.
    ========================================================================== */
 
+@font-face {
+  font-family: 'DaxOT';
+  src: url('DaxWeb.eot');
+  src: url('DaxWeb.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DaxOT';
+  src: url('DaxWeb-Bold.eot');
+  src: url('DaxWeb-Bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
 body {
   margin-top: 0;
-  font-family: "Dax OT", sans-serif;
+  font-family: DaxOT, sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: normal;
