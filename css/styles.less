@@ -16,7 +16,9 @@
 @palette-light-gray: #E5E5E5;
 @palette-black: #333;
 @palette-blue: #014786;
+@palette-medium-blue: #73BDFF;
 @palette-light-blue: #CBDEF0;
+
 @palette-orange: #FE9915;
 @palette-green: #1482A1;
 
@@ -89,6 +91,14 @@
     background-size: 30px;
     width: 30px;
     height: 21px;
+  }
+}
+
+#arrow-link-small() {
+  &::after {
+    background-size: 24px;
+    width: 24px;
+    height: 18px;
   }
 }
 
@@ -635,8 +645,8 @@ footer {
   }
 
   & > .launch-app-link {
-    #arrow-link(@palette-blue, '../img/arrow-blue.svg');
     font-size: @font-size-larger;
+    #arrow-link(@palette-blue, '../img/arrow-blue.svg');
 
     &:hover {
       color: @palette-orange;
@@ -709,8 +719,9 @@ footer {
   }
 
   & > .get-started-link {
-    #arrow-link(@palette-white, '../img/arrow-white.svg');
+    #arrow-link(@palette-white, '../img/arrow-medium-blue.svg');
     font-size: @font-size-larger;
+    color: @palette-medium-blue;
 
     &:hover {
       #arrow-link(@palette-orange, '../img/arrow-orange.svg');
@@ -972,6 +983,8 @@ footer {
    >= 850 and < 1000px: make logo smaller, desktop or tablet mode
    < 850px: mobile mode: re-order items, change navigation
  */
+
+/* ---- Smaller Desktop Mode ---- */
 @media screen and (max-width: 999px) {
   #eclipse-scout-logo {
     margin-top: 5px;
@@ -1042,6 +1055,11 @@ footer {
     }
     & > .launch-app-link {
       font-size: @font-size-button;
+      #arrow-link-small();
+
+      &:hover {
+        #arrow-link-small();
+      }
     }
   }
 
@@ -1054,6 +1072,11 @@ footer {
     }
     & > .get-started-link {
       font-size: @font-size-button;
+      #arrow-link-small();
+
+      &:hover {
+        #arrow-link-small();
+      }
     }
   }
 
@@ -1067,6 +1090,7 @@ footer {
   }
 }
 
+/* ---- Mobile Mode ---- */
 @media screen and (max-width: 849px) {
   .desktop-only {
     display: none !important;
@@ -1129,7 +1153,7 @@ footer {
     width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    height: 245px;
+    height: 250px;
     padding: 0 calc(@mobile-page-margin / 2);
     margin-top: 15px;
   }
@@ -1152,7 +1176,7 @@ footer {
 
     & > a {
       display: block;
-      width: 195px;
+      width: 185px;
       height: 205px;
       border: solid 1px #ccc;
       background-color: rgba(255, 255, 255, 0.5);
@@ -1174,6 +1198,8 @@ footer {
 
   #demo-app-container-wrapper {
     height: 370px;
+    max-width: 500px;
+    margin: auto;
   }
 
   .line-with-dots {
@@ -1183,6 +1209,10 @@ footer {
 
   .demo-app-container {
     flex-direction: column-reverse;
+    // Not sure why right/left=0 is required. But without that, the container is not
+    // properly laid out in mobile mode, when a hidden container becomes visible.
+    right: 0;
+    left: 0;
   }
 
   .demo-apps-buttons {
@@ -1205,9 +1235,9 @@ footer {
   }
 
   .demo-app-description {
-    width: auto;
-    margin-right: 0;
+    margin: auto;
     text-align: center;
+    width: 100%;
 
     & > div {
       font-size: @font-size-button;
@@ -1222,16 +1252,30 @@ footer {
 
   #getting-started-panel-columns {
     width: calc(~'100% - 20px');
+    padding: 30px 0;
   }
 
   .getting-started-column {
     width: 50%;
 
     &.first {
-      border-right: 1px solid @palette-lighter-gray
+      border-right: 1px solid @palette-lighter-gray;
+      padding-right: 10px;
+      padding-left: 0;
     }
     &.center {
       display: none;
+    }
+    &.last {
+      padding-left: 10px;
+    }
+    & > h3 {
+      white-space: inherit;
+      min-height: 50px;
+    }
+    & > p {
+      white-space: inherit;
+      min-height: 70px;
     }
   }
 
@@ -1252,6 +1296,25 @@ footer {
       width: auto;
       margin-right: 0;
       padding-top: 0;
+    }
+  }
+
+  /* ---- Footer ---- */
+  footer {
+
+    padding: 30px 0 20px 0;
+
+    #eclipse-navigation-bar {
+      width: 80%;
+      margin: auto;
+      text-align: left;
+
+      & > a {
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
     }
   }
 
