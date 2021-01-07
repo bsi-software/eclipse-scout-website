@@ -18,6 +18,7 @@
 @palette-blue: #014786;
 @palette-medium-blue: #73BDFF;
 @palette-light-blue: #CBDEF0;
+@palette-bsi-blue: #1482A1;
 
 @palette-orange: #FE9915;
 @palette-green: #1482A1;
@@ -45,7 +46,7 @@
 
 @tile-height: 200px;
 @mobile-max-image-height: 240px;
-@mobile-page-margin: 10px;
+@mobile-page-margin: 15px;
 
 /* ==== MIX-INS ==== */
 #drop-shadow-soft() {
@@ -668,8 +669,9 @@ footer {
 .demo-app-image {
   text-align: center;
   width: 55%;
+
   & > a > img {
-    max-width: 100%;
+    max-width: calc(100% - 2px);
     border: solid 1px @palette-lighter-gray;
     border-radius: @border-radius-image;
     #drop-shadow-soft();
@@ -1099,20 +1101,39 @@ footer {
     display: block;
   }
 
+  /* ---- Header ---- */
+  header {
+    padding: 10px @mobile-page-margin;
+    margin-bottom: 30px;
+    border-bottom: solid 1px @palette-bsi-blue;
+  }
+
   #eclipse-scout-logo {
     flex-grow: 1;
-    margin-top: 0;
+    margin-top: 6px;
+    height: 24px;
+    display: flex;
+
+    & > .logo {
+      display: block;
+      width: 35px;
+      height: 31px;
+      background-size: contain;
+    }
+
+    & > .text {
+      display: block;
+      opacity: 1;
+      width: 190px;
+      margin-top: 1.5px;
+    }
   }
 
-  header {
-    padding: 5px 10px;
-    margin-bottom: 10px;
-  }
-
+  /* ---- Intro ---- */
   #intro-panel {
     flex-direction: column-reverse;
-    margin: auto 10px @vgap-medium 10px;
-    width: calc(~'100% - 20px');
+    margin: auto @mobile-page-margin @vgap-medium @mobile-page-margin;
+    width: calc(~'100% - 2 * @{mobile-page-margin}');
   }
 
   .intro-column {
@@ -1132,6 +1153,7 @@ footer {
     }
   }
 
+  /* ---- Features ---- */
   #features-panel {
     text-align: left;
     padding-bottom: 10px;
@@ -1187,8 +1209,9 @@ footer {
     }
   }
 
+  /* ---- Demo Apps ---- */
   #demo-apps-panel {
-    width: calc(~'100% - 20px');
+    width: calc(~'100% - 2 * @{mobile-page-margin}');
     padding: 15px 0;
   }
 
@@ -1220,7 +1243,7 @@ footer {
   }
 
   .demo-app-button > .demo-app-button-donut {
-    padding: 0 5px;
+    padding: 0 7px;
     width: 40px;
     height: 40px;
   }
@@ -1250,13 +1273,15 @@ footer {
     }
   }
 
+  /* ---- Getting Started ---- */
   #getting-started-panel-columns {
-    width: calc(~'100% - 20px');
+    width: calc(~'100% - 2 * @{mobile-page-margin}');
     padding: 30px 0;
   }
 
   .getting-started-column {
     width: 50%;
+    text-align: center;
 
     &.first {
       border-right: 1px solid @palette-lighter-gray;
@@ -1271,16 +1296,19 @@ footer {
     }
     & > h3 {
       white-space: inherit;
-      min-height: 50px;
+      min-height: 55px;
     }
     & > p {
       white-space: inherit;
-      min-height: 70px;
+      min-height: 100px;
+      max-width: 200px;
+      margin: auto;
     }
   }
 
+  /* ---- Try Scout ---- */
   #try-scout-js-panel {
-    width: calc(~'100% - 20px');
+    width: calc(~'100% - 2 * @{mobile-page-margin}');
   }
 
   #try-scout-js-columns {
