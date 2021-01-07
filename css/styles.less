@@ -1129,6 +1129,58 @@ footer {
     }
   }
 
+  /* ---- Navigation ---- */
+  #main-navigation {
+    display: none;
+    position: fixed;
+    padding-top: 10px;
+    background-color: @palette-blue;
+    top: 56px;
+    right: 0;
+    height: calc(100% - 58px);
+    z-index: 1;
+    color: white;
+    width: 55%;
+    transition: margin 0.35s ease;
+    margin-right: -55%; // Move panel out of the viewport
+
+    &.navigation-slide-in {
+      margin-right: 0;
+    }
+
+    & .navigation-item {
+      font-size: @font-size-button;
+
+      &.first {
+        text-align: left;
+      }
+
+      &.lv2 {
+        margin-left: 15px;
+        margin-bottom: 0 !important;
+
+        &::before {
+          display: none !important;
+        }
+
+        & > .navigation-item-container {
+          & > .title {
+            font-size: @font-size-small;
+            font-weight: normal;
+            color: @palette-light-blue;
+          }
+          & > .text {
+            display: none !important;
+          }
+        }
+      }
+
+      & > a {
+        color: white;
+      }
+    }
+  }
+
   /* ---- Intro ---- */
   #intro-panel {
     flex-direction: column-reverse;

@@ -73,11 +73,25 @@ function onTooltipMouseover(event) {
 function installHandlers() {
   $('#get-started-button').on('click', onGetStartedButtonClick);
 
-  $('.demo-app-button').on('click', onDemoAppButtonClick);
+  $('#mobile-navigation-button').on('click', onMobileNavigationButtonClick);
 
   $('.navigation-item.lv1 > .text').on('click', onNavigationItemLv1Click);
 
+  $('.demo-app-button').on('click', onDemoAppButtonClick);
+
   $('.tooltip').one('mouseover', onTooltipMouseover);
+}
+
+function onMobileNavigationButtonClick(event) {
+  let $navigation = $('#main-navigation');
+  $navigation.css('display', 'block');
+
+  $navigation.find('.navigation-popup')
+    .removeClass('hidden navigation-popup');
+
+  setTimeout(() => {
+    $navigation.addClass('navigation-slide-in');
+  });
 }
 
 function onNavigationItemLv1Click(event) {
