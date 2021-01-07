@@ -4,6 +4,8 @@
 * Start http://localhost:8080/
 
 ## TODOs
+* Margins im Mobile grosszügiger (15px horiz.)
+* Mobile Navigation finalisieren, Konzept wie bei heutiger Scout Site
 * JS-Error get-started-button wenn nicht auf start seite
 * Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht

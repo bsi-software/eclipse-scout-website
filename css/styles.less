@@ -42,6 +42,8 @@
 @sm-icon-size: 28px;
 
 @tile-height: 200px;
+@mobile-max-image-height: 240px;
+@mobile-page-margin: 10px;
 
 /* ==== MIX-INS ==== */
 #drop-shadow-soft() {
@@ -230,6 +232,8 @@ header {
 }
 
 /* ==== NAVIGATION ==== */
+
+/* Desktop */
 #main-navigation {
   display: flex;
   flex-grow: 4;
@@ -342,6 +346,18 @@ header {
   }
 }
 
+/* Mobile Navigation */
+#mobile-navigation-button {
+  background-image: url(../img/regular/navigation-menu.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+}
 
 /* ==== FOOTER ==== */
 footer {
@@ -640,6 +656,7 @@ footer {
 }
 
 .demo-app-image {
+  text-align: center;
   width: 55%;
   & > a > img {
     max-width: 100%;
@@ -943,7 +960,14 @@ footer {
 
 }
 
-/* ==== MEDIA QUERIES ==== */
+/* ==== MEDIA QUERIES & RESPONSIVENESS ==== */
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
 /* >= 1000px: desktop mode
    >= 850 and < 1000px: make logo smaller, desktop or tablet mode
    < 850px: mobile mode: re-order items, change navigation
@@ -1041,4 +1065,194 @@ footer {
       font-size: @font-size-small;
     }
   }
+}
+
+@media screen and (max-width: 849px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block;
+  }
+
+  #eclipse-scout-logo {
+    flex-grow: 1;
+    margin-top: 0;
+  }
+
+  header {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  #intro-panel {
+    flex-direction: column-reverse;
+    margin: auto 10px @vgap-medium 10px;
+    width: calc(~'100% - 20px');
+  }
+
+  .intro-column {
+    &.first {
+      width: auto;
+      margin-right: 0;
+      text-align: center;
+
+      & > img {
+        width: auto;
+        max-height: @mobile-max-image-height;
+        max-width: 100%;
+      }
+    }
+    &.last {
+      width: 100%;
+    }
+  }
+
+  #features-panel {
+    text-align: left;
+    padding-bottom: 10px;
+
+    & > h2 {
+      text-align: left;
+      padding: 0 @mobile-page-margin;
+    }
+    & > p {
+      text-align: left;
+      width: auto;
+      padding: 0 @mobile-page-margin;
+      margin-bottom: 15px;
+    }
+  }
+
+  .features-grid {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 245px;
+    padding: 0 calc(@mobile-page-margin / 2);
+    margin-top: 15px;
+  }
+
+  .features-grid-row {
+    display: flex;
+
+    &.first > .features-grid-tile {
+      border-bottom: none;
+    }
+
+    &:not(.first) > .features-grid-tile {
+      padding: 5px;
+    }
+  }
+
+  .features-grid-tile {
+    display: block;
+    width: auto;
+
+    & > a {
+      display: block;
+      width: 195px;
+      height: 205px;
+      border: solid 1px #ccc;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:not(.last) {
+      border-right: none;
+    }
+  }
+
+  #demo-apps-panel {
+    width: calc(~'100% - 20px');
+    padding: 15px 0;
+  }
+
+  #demo-apps-navigation {
+    margin: 20px 0 10px 0;
+  }
+
+  #demo-app-container-wrapper {
+    height: 370px;
+  }
+
+  .line-with-dots {
+    height: 40px;
+    background-size: 120px 40px;
+  }
+
+  .demo-app-container {
+    flex-direction: column-reverse;
+  }
+
+  .demo-apps-buttons {
+    width: 100%;
+  }
+
+  .demo-app-button > .demo-app-button-donut {
+    padding: 0 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .demo-app-image {
+    width: auto;
+    margin-bottom: 15px;
+
+    & > a > img {
+      max-height: @mobile-max-image-height;
+    }
+  }
+
+  .demo-app-description {
+    width: auto;
+    margin-right: 0;
+    text-align: center;
+
+    & > div {
+      font-size: @font-size-button;
+      margin-bottom: 0;
+    }
+    & > p {
+      font-size: @font-size-small;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  #getting-started-panel-columns {
+    width: calc(~'100% - 20px');
+  }
+
+  .getting-started-column {
+    width: 50%;
+
+    &.first {
+      border-right: 1px solid @palette-lighter-gray
+    }
+    &.center {
+      display: none;
+    }
+  }
+
+  #try-scout-js-panel {
+    width: calc(~'100% - 20px');
+  }
+
+  #try-scout-js-columns {
+    flex-direction: column;
+    margin: 20px 0 29px 0;
+  }
+
+  .try-scout-js-column {
+    &.last {
+      width: auto;
+    }
+    &.first {
+      width: auto;
+      margin-right: 0;
+      padding-top: 0;
+    }
+  }
+
 }
