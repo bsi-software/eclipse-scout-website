@@ -5,8 +5,6 @@
 
 ## TODOs
 * Alle Nav-Items verlinken
-* JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
-  Navi. Prüfen ob man auf Startseite ist?
 * Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
@@ -27,6 +25,8 @@
 * 4 Icons im Footer aus Community Menu verwenden.
 
 ## Erledigt
+* JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
+  Navi. Prüfen ob man auf Startseite ist?
 * About / Version mobile friendly machen
 * Mobile Navigation finalisieren, Konzept wie bei heutiger Scout Site
 * Margins im Mobile grosszügiger (15px horiz.)

@@ -47,10 +47,25 @@ function onDemoAppButtonClick() {
     .addEventListener('animationend', showAnimationListener);
 }
 
+function navigateToGetStarted() {
+  let $panel = $('#getting-started-panel');
+  if ($panel.length) {
+    // Only exists on index page
+    $('#getting-started-panel')[0].scrollIntoView({
+      behavior: 'smooth'
+    });
+  } else {
+    document.location = '/#getting-started-java';
+  }
+}
+
+function onGetStartedLinkClick() {
+  navigateToGetStarted();
+  hideMobileNavigation($('#main-navigation'));
+}
+
 function onGetStartedButtonClick() {
-  $('#getting-started-panel')[0].scrollIntoView({
-    behavior: 'smooth'
-  });
+  navigateToGetStarted();
 }
 
 /**
@@ -72,13 +87,9 @@ function onTooltipMouseover(event) {
 
 function installHandlers() {
   $('#get-started-button').on('click', onGetStartedButtonClick);
-
   $('#mobile-navigation-button').on('click', onMobileNavigationButtonClick);
-
   $('.navigation-item.lv1 > .text').on('click', onNavigationItemLv1Click);
-
   $('.demo-app-button').on('click', onDemoAppButtonClick);
-
   $('.tooltip').one('mouseover', onTooltipMouseover);
 }
 
