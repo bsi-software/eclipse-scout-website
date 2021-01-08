@@ -333,7 +333,7 @@ header {
   display: inline-block;
 }
 
-.navigation-popup {
+.navigation-lv2-panel {
   position: absolute;
   margin-left: -80px;
   margin-top: 15px;
@@ -345,7 +345,7 @@ header {
   border: solid 1px @palette-light-gray;
 
   &::before {
-    content: ' ';
+    content: '';
     position: absolute;
     background-color: white;
     width: 20px;
@@ -368,6 +368,13 @@ header {
   height: 36px;
   border: none;
   cursor: pointer;
+
+  &.open {
+    background-image: url(../img/regular/close.svg);
+    background-size: 26px 26px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+  }
 }
 
 /* ==== FOOTER ==== */
@@ -1134,7 +1141,9 @@ footer {
     display: none;
     position: fixed;
     padding-top: 10px;
-    background-color: @palette-blue;
+    //background-color: @palette-blue;
+    background: rgb(1,71,134);
+    background: radial-gradient(circle, rgba(1,71,134,1) 33%, rgba(12,40,66,1) 98%);
     top: 56px;
     right: 0;
     height: calc(100% - 58px);
@@ -1143,6 +1152,10 @@ footer {
     width: 55%;
     transition: margin 0.35s ease;
     margin-right: -55%; // Move panel out of the viewport
+
+    &.open { // this class is only implemented for mobile mode
+      display: block;
+    }
 
     &.navigation-slide-in {
       margin-right: 0;
@@ -1155,9 +1168,28 @@ footer {
         text-align: left;
       }
 
+      &.has-children > .text {
+        &::after {
+          display: inline-block;
+          float: right;
+          content: '';
+          width: 16px;
+          height: 16px;
+          margin-top: 4px;
+          background-image: url(../img/regular/arrow-down-1.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          transition: transform 0.25s ease;
+        }
+        &.open::after {
+          transform: rotate(180deg);
+        }
+      }
+
       &.lv2 {
-        margin-left: 15px;
-        margin-bottom: 0 !important;
+        margin-left: 1px;
+        margin-bottom: 9px !important;
+        margin-top: 9px;
 
         &::before {
           display: none !important;
@@ -1165,7 +1197,7 @@ footer {
 
         & > .navigation-item-container {
           & > .title {
-            font-size: @font-size-small;
+            font-size: @font-size-medium;
             font-weight: normal;
             color: @palette-light-blue;
           }
@@ -1178,6 +1210,21 @@ footer {
       & > a {
         color: white;
       }
+    }
+  }
+
+  .navigation-lv2-panel {
+    position: static;
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    z-index: inherit;
+    border-radius: 0;
+    border: none;
+
+    &::before {
+      content: none;
     }
   }
 

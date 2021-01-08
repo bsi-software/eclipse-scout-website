@@ -83,58 +83,75 @@ function installHandlers() {
 }
 
 function onMobileNavigationButtonClick(event) {
+  let $navButton = $(event.currentTarget);
+  let open = $navButton.hasClass('open');
   let $navigation = $('#main-navigation');
-  $navigation.css('display', 'block');
 
-  $navigation.find('.navigation-popup')
-    .removeClass('hidden navigation-popup');
-
-  setTimeout(() => {
-    $navigation.addClass('navigation-slide-in');
-  });
+  // Timeout is required for transition to work (cannot make a transition from display:none)
+  // Transition listener is required for the same reason when hiding the panel
+  if (open) {
+    // Close navigation panel
+    let transitionListener = () => {
+      $navigation[0].removeEventListener('transitionend', transitionListener);
+      $navigation.removeClass('open');
+    };
+    $navigation[0].addEventListener('transitionend', transitionListener);
+    $navButton.removeClass('open');
+    $navigation.removeClass('navigation-slide-in');
+  } else {
+    // Open navigation panel
+    $navButton.addClass('open');
+    $navigation.addClass('open');
+    setTimeout(() => {
+      $navigation.addClass('navigation-slide-in');
+    });
+  }
 }
 
 function onNavigationItemLv1Click(event) {
-  let $navItem = $(event.currentTarget);
-  let $popup = $navItem.parent().find('.navigation-popup');
+  let $navItemText = $(event.currentTarget);
+  let $panel = $navItemText.parent().find('.navigation-lv2-panel');
 
-  if (!$popup.length) {
-    hideAllNavigationPopups();
+  if (!$panel.length) {
+    hideAllNavigationPanels();
     return;
   }
 
-  if (!$popup.hasClass('hidden')) {
-    hideNavigationPopup($popup);
+  if (!$panel.hasClass('hidden')) {
+    hideNavigationPanel($panel);
     return;
   }
-  let clickHandler = onNavigationPopupClickOutside.bind($popup);
-  $popup.removeClass('hidden');
-  $popup.data('clickHandler', clickHandler);
+
+  $navItemText.addClass('open');
+  let clickHandler = onNavigationPanelClickOutside.bind($panel);
+  $panel.removeClass('hidden');
+  $panel.data('clickHandler', clickHandler);
   setTimeout(() => {
     $(document).on('click', clickHandler);
   });
 }
 
-function onNavigationPopupClickOutside(event) {
-  let $popup = this;
-  if ($popup[0] !== event.target) {
-    hideNavigationPopup($popup);
+function onNavigationPanelClickOutside(event) {
+  let $panel = this;
+  if ($panel[0] !== event.target) {
+    hideNavigationPanel($panel);
   }
 }
 
-function hideNavigationPopup($popup) {
-  $popup.addClass('hidden');
-  $(document).off('click', $popup.data('clickHandler'));
-  $popup.removeData('clickHandler');
+function hideNavigationPanel($panel) {
+  $panel.addClass('hidden');
+  $panel.parent().find('.text').removeClass('open');
+  $(document).off('click', $panel.data('clickHandler'));
+  $panel.removeData('clickHandler');
 }
 
-function hideAllNavigationPopups() {
-  $('.navigation-popup:not(.hidden)').each((index, element) => {
-    hideNavigationPopup($(element));
+function hideAllNavigationPanels() {
+  $('.navigation-lv2-panel:not(.hidden)').each((index, element) => {
+    hideNavigationPanel($(element));
   });
 }
 
 $(document).ready(() => {
   installHandlers();
-  hideAllNavigationPopups();
+  hideAllNavigationPanels();
 });
