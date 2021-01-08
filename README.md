@@ -4,12 +4,13 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* About / Version mobile friendly machen
 * Alle Nav-Items verlinken
-* JS-Error get-started-button wenn nicht auf start seite
+* JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
+  Navi. Prüfen ob man auf Startseite ist?
+* Internet Explorer ggf. Error abfangen / Edge prüfen
+* Browser- und Device Tests
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
   bei Kacheln und anderen Texten. Eher mit.
-* Internet Explorer ggf. Error abfangen / Edge prüfen
 * Build implementieren, package.json aufräumen
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Phase 2: Schauen ob wir github.io in die Homepage integrieren können.
@@ -26,6 +27,7 @@
 * 4 Icons im Footer aus Community Menu verwenden.
 
 ## Erledigt
+* About / Version mobile friendly machen
 * Mobile Navigation finalisieren, Konzept wie bei heutiger Scout Site
 * Margins im Mobile grosszügiger (15px horiz.)
 * Nowrap bei Get Started Titel --> responsive-ness generell
