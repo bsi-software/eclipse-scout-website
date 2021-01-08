@@ -185,7 +185,6 @@ function hideMobileNavigation($navigation) {
 
 function hideDesktopNavigationPanelLv2($panel) {
   $panel.addClass('hidden');
-  // $panel.parent().find('.text').removeClass('open');
   $(document).off('click', $panel.data('clickOutsideHandler'));
   $panel.removeData('clickOutsideHandler');
 }
@@ -201,7 +200,7 @@ function isMobileMode() {
   // See: https://stackoverflow.com/questions/44342065/how-to-get-a-dom-elements-before-content-with-javascript
   let detectionDiv = document.querySelector('#device-detection');
   let content = getComputedStyle(detectionDiv, ':before').getPropertyValue('content');
-  return 'mobile' === content;
+  return content && content.indexOf('mobile') > -1;
 }
 
 $(document).ready(() => {

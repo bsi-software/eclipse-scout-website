@@ -25,62 +25,63 @@
 
   <body>
 
-    <div id="wrapper">
-      <header>
-        <a href="/" id="eclipse-scout-logo"><div class="logo"></div><div class="text"></div></a>
+    <header>
+      <a href="/" id="eclipse-scout-logo"><div class="logo"></div><div class="text"></div></a>
 
-        <nav id="main-navigation">
-          <div class="navigation-item lv1 first"><a href="#" class="text">Tutorial</a></div>
-          <div class="navigation-item lv1"><a href="#" class="text">Docs</a></div>
-          <div class="navigation-item lv1 has-children">
-            <div class="text">Community</div>
-            <div class="navigation-lv2-panel hidden">
-              <div class="navigation-item lv2 first" id="icon-eclipse-scout-forum">
-                <div class="navigation-item-container">
-                  <div class="title">Eclipse Scout Forum</div>
-                  <div class="text">Need help? Ask the experts</div>
-                </div>
-              </div>
-              <div class="navigation-item lv2" id="icon-stack-overflow">
-                <div class="navigation-item-container">
-                  <div class="title">StackOverflow</div>
-                  <div class="text">Another source for help</div>
-                </div>
-              </div>
-              <div class="navigation-item lv2" id="icon-git-hub">
-                <div class="navigation-item-container">
-                  <div class="title">GitHub</div>
-                  <div class="text">View source code. Contribute</div>
-                </div>
-              </div>
-              <div class="navigation-item lv2 last" id="icon-bugzilla">
-                <div class="navigation-item-container">
-                  <div class="title">Bugzilla</div>
-                  <div class="text">Report errors</div>
-                </div>
+      <nav id="main-navigation">
+        <div class="navigation-item lv1 first"><a href="#" class="text">Tutorial</a></div>
+        <div class="navigation-item lv1"><a href="#" class="text">Docs</a></div>
+        <div class="navigation-item lv1 has-children">
+          <div class="text">Community</div>
+          <div class="navigation-lv2-panel hidden">
+            <div class="navigation-item lv2 first" id="icon-eclipse-scout-forum">
+              <div class="navigation-item-container">
+                <div class="title">Eclipse Scout Forum</div>
+                <div class="text">Need help? Ask the experts</div>
               </div>
             </div>
-
+            <div class="navigation-item lv2" id="icon-stack-overflow">
+              <div class="navigation-item-container">
+                <div class="title">StackOverflow</div>
+                <div class="text">Another source for help</div>
+              </div>
+            </div>
+            <div class="navigation-item lv2" id="icon-git-hub">
+              <div class="navigation-item-container">
+                <div class="title">GitHub</div>
+                <div class="text">View source code. Contribute</div>
+              </div>
+            </div>
+            <div class="navigation-item lv2 last" id="icon-bugzilla">
+              <div class="navigation-item-container">
+                <div class="title">Bugzilla</div>
+                <div class="text">Report errors</div>
+              </div>
+            </div>
           </div>
-          <div class="navigation-item lv1 last"><a href="about" class="text">About</a></div>
 
-          <div class="navigation-item lv1 mobile-only"><a href="/versions" class="text">Version Overview</a></div>
-          <div class="navigation-item lv1 mobile-only"><a href="#" class="text">Getting Started</a></div>
+        </div>
+        <div class="navigation-item lv1 last"><a href="about" class="text">About</a></div>
 
-        </nav>
+        <div class="navigation-item lv1 mobile-only"><a href="/versions" class="text">Version Overview</a></div>
+        <div class="navigation-item lv1 mobile-only"><a href="#" class="text">Getting Started</a></div>
 
-        <a href="/versions#v11" id="scout-version-button" class="desktop-only">
-          <svg height="36" width="36" viewBox="0 0 36 36">
-            <circle cx="18" cy="18" r="17" stroke="#014786" stroke-width="2" fill="white" />
-          </svg>
-          <div>v{{scout.version}}</div>
-        </a>
+      </nav>
 
-        <button id="get-started-button" class="desktop-only">Get Started</button>
+      <a href="/versions#v11" id="scout-version-button" class="desktop-only">
+        <svg height="36" width="36" viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="17" stroke="#014786" stroke-width="2" fill="white" />
+        </svg>
+        <div>v{{scout.version}}</div>
+      </a>
 
-        <button id="mobile-navigation-button" class="mobile-only"></button>
+      <button id="get-started-button" class="desktop-only">Get Started</button>
 
-      </header>
+      <button id="mobile-navigation-button" class="mobile-only"></button>
+
+    </header>
+
+    <div id="wrapper">
 
       {{{body}}}
 

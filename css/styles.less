@@ -175,6 +175,9 @@ body {
 header {
   display: flex;
   padding: 50px 60px;
+  max-width: 1080px;
+  margin: auto;
+  background-color: @palette-white;
 }
 
 #eclipse-scout-logo {
@@ -1126,11 +1129,21 @@ footer {
     display: block;
   }
 
+  body {
+    background-color: @palette-white;
+  }
+
   /* ---- Header ---- */
   header {
     padding: 10px @mobile-page-margin;
     margin-bottom: 30px;
     border-bottom: solid 1px @palette-bsi-blue;
+  }
+
+  // Don't react on clicks, blur everything
+  body.fixed > #wrapper {
+    filter: blur(2px);
+    pointer-events: none;
   }
 
   #eclipse-scout-logo {
