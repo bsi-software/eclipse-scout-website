@@ -130,12 +130,26 @@ body {
   font-style: normal;
   font-weight: normal;
   background-color: @palette-light-gray;
+
+  // Required in mobile mode to disable scrolling when navigation panel is open
+  &.fixed {
+    overflow-y: hidden;
+  }
 }
 
 #wrapper {
   max-width: 1200px;
   margin: auto;
   background-color: @palette-white;
+}
+
+// Used to detect mobile mode (=media queries) with JavaScript
+#device-detection {
+  font-size: 0.1px;
+
+  &::before {
+    content: 'desktop'
+  }
 }
 
 /* ==== ANIMATIONS ==== */
@@ -1097,6 +1111,10 @@ footer {
       font-size: @font-size-small;
     }
   }
+
+  #device-detection::before {
+    content: 'tablet';
+  }
 }
 
 /* ---- Mobile Mode ---- */
@@ -1222,9 +1240,20 @@ footer {
     z-index: inherit;
     border-radius: 0;
     border: none;
+    // Maybe we should do this with jQuery animation, because CSS only cannot animate height 'auto' to 0
+    // See: https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    max-height: 200px;
+    height: auto;
 
     &::before {
       content: none;
+    }
+
+    &.hidden {
+      display: inherit !important; // Override hidden from normalizer.css
+      max-height: 0;
     }
   }
 
@@ -1445,4 +1474,7 @@ footer {
     }
   }
 
+  #device-detection::before {
+    content: 'mobile';
+  }
 }

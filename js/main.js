@@ -82,24 +82,75 @@ function installHandlers() {
   $('.tooltip').one('mouseover', onTooltipMouseover);
 }
 
+function onNavigationItemLv1Click(event) {
+  let $navItemText = $(event.currentTarget);
+  let $navPanel = $navItemText.parent().find('.navigation-lv2-panel');
+
+  if (isMobileMode()) {
+    toggleMobileNavigationPanelLv2($navItemText, $navPanel);
+  } else {
+    toggleDesktopNavigationPanelLv2($navItemText, $navPanel);
+  }
+}
+
+function toggleMobileNavigationPanelLv2($navItemText, $navPanel) {
+  let open = $navItemText.hasClass('open');
+  if (open) {
+    $navPanel.addClass('hidden');
+    $navItemText.removeClass('open');
+  } else {
+    $navPanel.removeClass('hidden');
+    $navItemText.addClass('open');
+  }
+}
+
+function toggleDesktopNavigationPanelLv2($navItemText, $navPanel) {
+  if (!$navPanel.length) {
+    hideAllDesktopNavigationPanelsLv2();
+    return;
+  }
+
+  if (!$navPanel.hasClass('hidden')) {
+    hideDesktopNavigationPanelLv2($navPanel);
+    return;
+  }
+
+  $navItemText.addClass('open');
+  let clickOutsideHandler = onDesktopNavigationPanelLv2ClickOutside.bind($navPanel);
+  $navPanel.removeClass('hidden');
+  $navPanel.data('clickOutsideHandler', clickOutsideHandler);
+  setTimeout(() => {
+    $(document).on('click', clickOutsideHandler);
+  });
+}
+
+function onDesktopNavigationPanelLv2ClickOutside(event) {
+  let $panel = this;
+  if ($panel[0] !== event.target) {
+    hideDesktopNavigationPanelLv2($panel);
+  }
+}
+
 function onMobileNavigationButtonClick(event) {
   let $navButton = $(event.currentTarget);
-  let open = $navButton.hasClass('open');
   let $navigation = $('#main-navigation');
+  let $body = $('body');
+  let open = $navButton.hasClass('open');
 
   // Timeout is required for transition to work (cannot make a transition from display:none)
   // Transition listener is required for the same reason when hiding the panel
   if (open) {
     // Close navigation panel
-    let transitionListener = () => {
-      $navigation[0].removeEventListener('transitionend', transitionListener);
-      $navigation.removeClass('open');
-    };
-    $navigation[0].addEventListener('transitionend', transitionListener);
-    $navButton.removeClass('open');
-    $navigation.removeClass('navigation-slide-in');
+    hideMobileNavigation($navigation);
   } else {
     // Open navigation panel
+    let clickOutsideHandler = onMobileNavigationClickOutside.bind($navigation);
+    $navigation.data('clickOutsideHandler', clickOutsideHandler);
+    setTimeout(() => {
+      $(document).on('click', clickOutsideHandler);
+    });
+
+    $body.addClass('fixed');
     $navButton.addClass('open');
     $navigation.addClass('open');
     setTimeout(() => {
@@ -108,50 +159,53 @@ function onMobileNavigationButtonClick(event) {
   }
 }
 
-function onNavigationItemLv1Click(event) {
-  let $navItemText = $(event.currentTarget);
-  let $panel = $navItemText.parent().find('.navigation-lv2-panel');
-
-  if (!$panel.length) {
-    hideAllNavigationPanels();
-    return;
-  }
-
-  if (!$panel.hasClass('hidden')) {
-    hideNavigationPanel($panel);
-    return;
-  }
-
-  $navItemText.addClass('open');
-  let clickHandler = onNavigationPanelClickOutside.bind($panel);
-  $panel.removeClass('hidden');
-  $panel.data('clickHandler', clickHandler);
-  setTimeout(() => {
-    $(document).on('click', clickHandler);
-  });
-}
-
-function onNavigationPanelClickOutside(event) {
-  let $panel = this;
-  if ($panel[0] !== event.target) {
-    hideNavigationPanel($panel);
+function onMobileNavigationClickOutside(event) {
+  let $navigation = this;
+  let $header = $('header');
+  if ($header.has(event.target).length === 0) {
+    hideMobileNavigation($navigation);
   }
 }
 
-function hideNavigationPanel($panel) {
+function hideMobileNavigation($navigation) {
+  let transitionListener = () => {
+    $navigation[0].removeEventListener('transitionend', transitionListener);
+    $navigation.removeClass('open');
+  };
+  let $body = $('body');
+  let $navButton = $('#mobile-navigation-button');
+  $navigation[0].addEventListener('transitionend', transitionListener);
+  $body.removeClass('fixed');
+  $navButton.removeClass('open');
+  $navigation.removeClass('navigation-slide-in');
+
+  $(document).off('click', $navigation.data('clickOutsideHandler'));
+  $navigation.removeData('clickOutsideHandler');
+}
+
+function hideDesktopNavigationPanelLv2($panel) {
   $panel.addClass('hidden');
-  $panel.parent().find('.text').removeClass('open');
-  $(document).off('click', $panel.data('clickHandler'));
-  $panel.removeData('clickHandler');
+  // $panel.parent().find('.text').removeClass('open');
+  $(document).off('click', $panel.data('clickOutsideHandler'));
+  $panel.removeData('clickOutsideHandler');
 }
 
-function hideAllNavigationPanels() {
+function hideAllDesktopNavigationPanelsLv2() {
   $('.navigation-lv2-panel:not(.hidden)').each((index, element) => {
-    hideNavigationPanel($(element));
+    hideDesktopNavigationPanelLv2($(element));
   });
+}
+
+function isMobileMode() {
+  // Read property 'content' from ::before element set by CSS
+  // See: https://stackoverflow.com/questions/44342065/how-to-get-a-dom-elements-before-content-with-javascript
+  let detectionDiv = document.querySelector('#device-detection');
+  let content = getComputedStyle(detectionDiv, ':before').getPropertyValue('content');
+  return 'mobile' === content;
 }
 
 $(document).ready(() => {
+  $('<div>').attr('id', 'device-detection').appendTo($('body'));
   installHandlers();
-  hideAllNavigationPanels();
+  hideAllDesktopNavigationPanelsLv2();
 });
