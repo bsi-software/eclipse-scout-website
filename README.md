@@ -4,7 +4,8 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* Mobile Navigation finalisieren, Konzept wie bei heutiger Scout Site
+* About / Version mobile friendly machen
+* Alle Nav-Items verlinken
 * JS-Error get-started-button wenn nicht auf start seite
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
   bei Kacheln und anderen Texten. Eher mit.
@@ -25,6 +26,7 @@
 * 4 Icons im Footer aus Community Menu verwenden.
 
 ## Erledigt
+* Mobile Navigation finalisieren, Konzept wie bei heutiger Scout Site
 * Margins im Mobile grosszügiger (15px horiz.)
 * Nowrap bei Get Started Titel --> responsive-ness generell
 * Prüfen, ob das Copyright unten im Footer korrekt ist (Eclipse statt BSI?)

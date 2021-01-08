@@ -1120,7 +1120,7 @@ footer {
   }
 }
 
-/* ---- Mobile Mode ---- */
+/* ==== MOBILE MODE ==== */
 @media screen and (max-width: 849px) {
   .desktop-only {
     display: none !important;
@@ -1417,7 +1417,7 @@ footer {
   /* ---- Getting Started ---- */
   #getting-started-panel-columns {
     width: calc(~'100% - 2 * @{mobile-page-margin}');
-    padding: 30px 0;
+    padding: calc(2 * @mobile-page-margin) 0;
   }
 
   .getting-started-column {
@@ -1484,6 +1484,33 @@ footer {
         text-align: center;
         margin: 0 0 10px 0;
       }
+    }
+  }
+
+  /* Content */
+  #content-header {
+    width: calc(~'100% - 2 * @{mobile-page-margin}');
+    padding: 0 @mobile-page-margin;
+    margin: 0 0 17% 0;
+
+    & > p {
+      max-width: 600px;
+      margin: auto auto @vgap-medium auto;
+    }
+
+    & > img {
+      max-height: @mobile-max-image-height;
+      max-width: 100%;
+      width: auto;
+    }
+  }
+
+  .content-block {
+    padding: 5% @mobile-page-margin;
+
+    & > .content-block-column.first {
+      width: calc(45% - 25px);
+      margin-right: 25px;
     }
   }
 
