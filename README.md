@@ -8,7 +8,7 @@
 * Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
-  bei Kacheln und anderen Texten. Eher mit.
+  bei Kacheln und anderen Texten? Eher mit.
 * Build implementieren, package.json aufräumen
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Phase 2: Schauen ob wir github.io in die Homepage integrieren können.
