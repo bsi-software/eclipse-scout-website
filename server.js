@@ -8,28 +8,42 @@ const handlebars = require('express-handlebars');
 const less = require('express-less');
 const app = express();
 
+/**
+ * Change the version number below for a new Scout release. This will also update
+ * version numbers in URLs, so the point to the correct Scout release.
+ * @type {number}
+ */
+const SCOUT_VERSION = 10;
+const SCOUT_VERSION_STRING = SCOUT_VERSION + '.0';
+
 // Handlebars Variables
 app.locals = {
   scout: {
-    version: 11
+    version: SCOUT_VERSION // Used in version-button
   },
   urls: {
     bsi: {
-      home: 'https://scout.bsi-software.com/',
       appContacts: 'https://scout.bsi-software.com/contacts/',
-      appScoutJsWidgets: 'https://scout.bsi-software.com/jswidgets/',
       appScoutClassicWidgets: 'https://scout.bsi-software.com/widgets/',
+      appScoutJsWidgets: 'https://scout.bsi-software.com/jswidgets/',
+      home: 'https://scout.bsi-software.com/',
       scoutBlog: 'https://www.bsi-software.com/en/scout-blog'
     },
+    docs: {
+      home: 'https://eclipsescout.github.io/' + SCOUT_VERSION_STRING + '/',
+      tutorial: 'https://eclipsescout.github.io/' + SCOUT_VERSION_STRING + '/beginners-guide.html'
+    },
     eclipse: {
-      home: 'http://www.eclipse.org/',
-      privacyPolicy: 'http://www.eclipse.org/legal/privacy.php',
-      termsOfUse: 'http://www.eclipse.org/legal/termsofuse.php',
+      bugzilla: 'https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=RESOLVED&bug_status=VERIFIED&columnlist=bug_id%2Cbug_severity%2Cpriority%2Ctarget_milestone%2Cbug_status%2Cresolution%2Ccomponent%2Cassigned_to%2Cshort_desc&list_id=10272285&product=Scout&query_format=advanced',
       copyrightAgent: 'http://www.eclipse.org/legal/copyright.php',
+      home: 'http://www.eclipse.org/',
       legal: 'http://www.eclipse.org/legal',
+      privacyPolicy: 'http://www.eclipse.org/legal/privacy.php',
+      scoutForum: 'https://www.eclipse.org/forums/index.php?t=thread&frm_id=174',
+      termsOfUse: 'http://www.eclipse.org/legal/termsofuse.php',
       wikipedia: 'https://de.wikipedia.org/wiki/Eclipse_Foundation'
     },
-    gitHub: 'https://github.com/eclipse/scout.rt',
+    gitHub: 'https://github.com/eclipse/scout.rt/tree/releases/' + SCOUT_VERSION_STRING + '/',
     stackOverflow: 'https://stackoverflow.com/tags/eclipse-scout'
   }
 };
@@ -51,7 +65,10 @@ app.use('/js', express.static(__dirname + '/js'));
 
 // Pages
 app.get('/', (req, res) => {
-  res.render('home', {layout: 'index'});
+  res.render('home', {
+    layout: 'index',
+    home: true
+  });
 });
 app.get('/about', (req, res) => {
   res.render('about', {layout: 'index'});

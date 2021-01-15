@@ -26,38 +26,42 @@
   <body>
 
     <header>
-      <a href="/" id="eclipse-scout-logo"><div class="logo"></div><div class="text"></div></a>
+      {{#if home}}
+        <div id="eclipse-scout-logo"><div class="logo"></div><div class="text"></div></div>
+      {{else}}
+        <a href="/" id="eclipse-scout-logo"><div class="logo"></div><div class="text"></div></a>
+      {{/if}}
 
       <nav id="main-navigation">
-        <div class="navigation-item lv1 first"><a href="#" class="text">Tutorial</a></div>
-        <div class="navigation-item lv1"><a href="#" class="text">Docs</a></div>
+        <div class="navigation-item lv1 first"><a href="{{urls.docs.tutorial}}" target="_blank" class="text">Tutorial</a></div>
+        <div class="navigation-item lv1"><a href="{{urls.docs.home}}" target="_blank" class="text">Docs</a></div>
         <div class="navigation-item lv1 has-children">
           <div class="text">Community</div>
           <div class="navigation-lv2-panel hidden">
-            <div class="navigation-item lv2 first" id="icon-eclipse-scout-forum">
+            <a href="{{urls.eclipse.scoutForum}}" target="_blank" class="navigation-item lv2 first" id="icon-eclipse-scout-forum">
               <div class="navigation-item-container">
                 <div class="title">Eclipse Scout Forum</div>
                 <div class="text">Need help? Ask the experts</div>
               </div>
-            </div>
-            <div class="navigation-item lv2" id="icon-stack-overflow">
+            </a>
+            <a href="{{urls.stackOverflow}}" target="_blank" class="navigation-item lv2" id="icon-stack-overflow">
               <div class="navigation-item-container">
                 <div class="title">StackOverflow</div>
                 <div class="text">Another source for help</div>
               </div>
-            </div>
-            <div class="navigation-item lv2" id="icon-git-hub">
+            </a>
+            <a href="{{urls.gitHub}}" target="_blank" class="navigation-item lv2" id="icon-git-hub">
               <div class="navigation-item-container">
                 <div class="title">GitHub</div>
                 <div class="text">View source code. Contribute</div>
               </div>
-            </div>
-            <div class="navigation-item lv2 last" id="icon-bugzilla">
+            </a>
+            <a href="{{urls.eclipse.bugzilla}}" target="_blank" class="navigation-item lv2 last" id="icon-bugzilla">
               <div class="navigation-item-container">
                 <div class="title">Bugzilla</div>
                 <div class="text">Report errors</div>
               </div>
-            </div>
+            </a>
           </div>
 
         </div>

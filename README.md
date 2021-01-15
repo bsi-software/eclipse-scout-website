@@ -4,7 +4,8 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* Alle Nav-Items verlinken
+* About in Benefits oder Features umbenennen
+* Scout Blog auf Website selber oder extern? Marketing fragen
 * Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
 * Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
@@ -25,6 +26,7 @@
 * 4 Icons im Footer aus Community Menu verwenden.
 
 ## Erledigt
+* Alle Nav-Items verlinken
 * JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
   Navi. Prüfen ob man auf Startseite ist?
 * About / Version mobile friendly machen
