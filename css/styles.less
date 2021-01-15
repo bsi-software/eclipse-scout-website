@@ -50,11 +50,11 @@
 
 /* ==== MIX-INS ==== */
 #drop-shadow-soft() {
-  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.4));
 }
 
 #drop-shadow-hard() {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
 }
 
 #title-font(@fontSize, @textColor) {
@@ -705,7 +705,6 @@ footer {
 
   & > a > img {
     max-width: calc(100% - 2px);
-    border: solid 1px @palette-lighter-gray;
     border-radius: @border-radius-image;
     #drop-shadow-soft();
   }

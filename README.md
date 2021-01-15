@@ -4,28 +4,22 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* About in Benefits oder Features umbenennen
+* CGU: Input für Texte liefern.
+  Finale englische Texte mit Carmen erarbeiten.
+* BSH: 4 Icons im Footer aus Community Menu verwenden.
+* CGU: About in Benefits oder Features umbenennen
 * Scout Blog auf Website selber oder extern? Marketing fragen
 * Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
-* Texte verbessern, Finale Texte bei Marketing bestellen. Punkt oder nicht
-  bei Kacheln und anderen Texten? Eher mit.
 * Build implementieren, package.json aufräumen
+* Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Phase 2: Schauen ob wir github.io in die Homepage integrieren können.
 
-## Input von Beat
-* Drop-shadow bei Bildern zu gross. Und auch bei V11 Button
-* Screenshots optimieren wegen abgerundeten ecken,
-  grauer rand bei screenshots wegmachen
-* 4 Icons im Footer aus Community Menu verwenden.
-* Get Started als Titel verwenden? Evtl. nicht klar was die Sektion bedeutet ohne Titel
-* v11 etwas komisch, evtl. als Kästli unter Business Applications made easy
-  oder besser neben dem Scout Logo?
-* Wo kann man Downloaden? Vielleicht auch bei Get Started unterbringen.
-
-
 ## Erledigt
+* BSH: Drop-shadow bei Bildern zu gross. Und auch bei V11 Button
+* BSH: Screenshots optimieren wegen abgerundeten Ecken,
+  grauer rand bei screenshots wegmachen
 * BSH: Ganze Pünktli oder Strich machen bei Demo Apps Widget
 * Text und Bild besser alignieren in About page (mobile version verbessern)
 * Alle Nav-Items verlinken
@@ -60,3 +54,14 @@
 * Demo-Apps: schnellerer Fade bei Überblendung
 * Demo-Apps: Screenshots vertauscht
 * Highlight-Color definieren (Farbklecks fehlt) --> Orange OK
+
+## Nicht realisiert
+* BSH: Get Started als Titel verwenden? Evtl. nicht klar was die Sektion bedeutet ohne Titel
+  --> CGU: klar genug
+* BSH: v11 etwas komisch, evtl. als Kästli unter Business Applications made easy
+  oder besser neben dem Scout Logo?
+  --> CGU: verständlich. Ähnlich wie andere Sites das machen, man sieht sofort
+  was der aktuelle Release ist.
+* BSH: Wo kann man Downloaden? Vielleicht auch bei Get Started unterbringen.
+  --> CGU: es gibt keine einfach Download-Möglickeit, es braucht immer den
+  Weg über die Beginners Guide.
