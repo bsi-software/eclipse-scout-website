@@ -18,14 +18,15 @@
 * Drop-shadow bei Bildern zu gross. Und auch bei V11 Button
 * Screenshots optimieren wegen abgerundeten ecken,
   grauer rand bei screenshots wegmachen
-* Ganze Pünktli oder Strich machen bei Demo Apps Widget
+* 4 Icons im Footer aus Community Menu verwenden.
 * Get Started als Titel verwenden? Evtl. nicht klar was die Sektion bedeutet ohne Titel
 * v11 etwas komisch, evtl. als Kästli unter Business Applications made easy
   oder besser neben dem Scout Logo?
 * Wo kann man Downloaden? Vielleicht auch bei Get Started unterbringen.
-* 4 Icons im Footer aus Community Menu verwenden.
+
 
 ## Erledigt
+* BSH: Ganze Pünktli oder Strich machen bei Demo Apps Widget
 * Text und Bild besser alignieren in About page (mobile version verbessern)
 * Alle Nav-Items verlinken
 * JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
