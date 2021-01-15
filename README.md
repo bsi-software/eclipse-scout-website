@@ -26,6 +26,7 @@
 * 4 Icons im Footer aus Community Menu verwenden.
 
 ## Erledigt
+* Text und Bild besser alignieren in About page (mobile version verbessern)
 * Alle Nav-Items verlinken
 * JS-Error get-started-button wenn nicht auf start seite. Auch in Mobile
   Navi. Prüfen ob man auf Startseite ist?
