@@ -3,18 +3,22 @@
 * npm run dev:server
 * Start http://localhost:8080/
 
+
 ## TODOs
-* BSH: 4 Icons im Footer aus Community Menu verwenden.
+* CGU: Neue Screenshots für Charts erstellen
+* Finale Illustrationen -> Remo?
 * Build implementieren, package.json aufräumen
-* Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
+* Internet Explorer ggf. Error abfangen / Edge prüfen (Babel, ES5 transpile)
 * Finale englische Texte von Carmen übernehmen.
-* Scout Blog auf Website selber oder extern? Marketing fragen
-* Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
-* Phase 2: Schauen ob wir github.io in die Homepage integrieren können.
+* Phase 2: Github.io in die Homepage integrieren?
+* Phase 2: News/Blog in die Homepage integrieren? Mit Marketing klären
+
 
 ## Erledigt
+* Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
+* BSH: 4 Icons im Footer aus Community Menu verwenden.
 * Favicons
 * Titel vom HTML Dokument setzen
 * Blaue Links korrigieren (Screenshot von CGU)
