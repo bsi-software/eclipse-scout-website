@@ -233,6 +233,7 @@ header {
     position: absolute;
     top: 8.5px;
     left: 6px;
+    color: @palette-black;
     font-size: @font-size-medium;
     text-align: center;
     transition: color 0.2s ease;
@@ -292,8 +293,12 @@ header {
       flex-grow: 1;
     }
 
-    & > .text:hover {
-      color: @palette-orange;
+    & > .text {
+      color: @palette-black;
+
+      &:hover {
+        color: @palette-orange;
+      }
     }
   }
 

@@ -4,19 +4,22 @@
 * Start http://localhost:8080/
 
 ## TODOs
-* CGU: Input für Texte liefern.
-  Finale englische Texte mit Carmen erarbeiten.
 * BSH: 4 Icons im Footer aus Community Menu verwenden.
-* CGU: About in Benefits oder Features umbenennen
+* Build implementieren, package.json aufräumen
+* Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
+* Finale englische Texte von Carmen übernehmen.
 * Scout Blog auf Website selber oder extern? Marketing fragen
 * Internet Explorer ggf. Error abfangen / Edge prüfen
 * Browser- und Device Tests
-* Build implementieren, package.json aufräumen
-* Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Phase 2: Schauen ob wir github.io in die Homepage integrieren können.
 
 ## Erledigt
+* Favicons
+* Titel vom HTML Dokument setzen
+* Blaue Links korrigieren (Screenshot von CGU)
+* CGU: About in Features (oder Benefits) umbenennen
+* CGU: Input für Texte liefern.
 * BSH: Drop-shadow bei Bildern zu gross. Und auch bei V11 Button
 * BSH: Screenshots optimieren wegen abgerundeten Ecken,
   grauer rand bei screenshots wegmachen

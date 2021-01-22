@@ -59,6 +59,7 @@ app.engine('hbs', handlebars({
 app.use('/css', less(__dirname + '/css', {debug: true}));
 
 // Static Resources
+app.use('/favicon.ico', express.static(__dirname + '/favicon.ico'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/js', express.static(__dirname + '/js'));
@@ -67,14 +68,21 @@ app.use('/js', express.static(__dirname + '/js'));
 app.get('/', (req, res) => {
   res.render('home', {
     layout: 'index',
+    title: 'Eclipse Scout - A one-stop framework to develop professional business applications',
     home: true
   });
 });
-app.get('/about', (req, res) => {
-  res.render('about', {layout: 'index'});
+app.get('/features', (req, res) => {
+  res.render('features', {
+    title: 'Why you will love Eclipse Scout',
+    layout: 'index'
+  });
 });
 app.get('/versions', (req, res) => {
-  res.render('versions', {layout: 'index'});
+  res.render('versions', {
+    title: 'Eclipse Scout Versions',
+    layout: 'index'
+  });
 });
 
 // Launch Server
