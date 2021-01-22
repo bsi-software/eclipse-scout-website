@@ -4,8 +4,24 @@
 * Start http://localhost:8080/
 
 
+## Screenshots für Scout Homepage Erstellen
+* Chrome verwenden
+* Outline-Tree mit D&D so einstellen, dass er genau 261px breit ist
+  (im DOM Inspector verifizieren)
+* Unnötige Nodes zuklappen
+* Chrome Window mit "Sizer" Tool auf 1280 x 960 resizen
+* Screenshot von Chrome Window machen (Alt + Print Screen)
+* In GIMP pasten. Ränder beschneiden. 1 Pixel Rahmen von Chrome
+  darf nicht Teil vom Bild sein.
+* Zielgrösse: 1278 x 859 Pixel
+* Scrollbars entfernen / übermalen
+* Outline-Selector Button oben links mit blau übermalen
+* Angeschnittene Texte in der Outline mit blau übermalen
+* Fertiges Bild kopieren / auf 800 x 538 skalieren
+* Als PNG speichern
+
+
 ## TODOs
-* CGU: Neue Screenshots für Charts erstellen
 * Finale Illustrationen -> Remo?
 * Build implementieren, package.json aufräumen
 * Internet Explorer ggf. Error abfangen / Edge prüfen (Babel, ES5 transpile)
@@ -17,6 +33,7 @@
 
 
 ## Erledigt
+* CGU: Neue Screenshots für Charts erstellen
 * Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
 * BSH: 4 Icons im Footer aus Community Menu verwenden.
 * Favicons
