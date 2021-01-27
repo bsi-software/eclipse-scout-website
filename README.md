@@ -20,6 +20,16 @@
 * Fertiges Bild kopieren / auf 800 x 538 skalieren
 * Als PNG speichern
 
+## Github.io
+* Die Doku bleibt vorerst auf Github.io. Wir gleichen aber den Look an die
+  neue Scout Homepage an.
+* Die Startseite auf Github.io hat nur noch einen Intro-Text, eine Illustration
+  und eine Tabelle mit den Scout Versionen. Klickt man auf einen Link in dieser
+  Tabelle kommt man zur Doku für diese Version.
+* Bei älteren Versionen der Doku soll im Header ein Hinweis angezeigt werden, dass
+  dies nicht mehr die aktuelle Version ist und einen Link zur aktuellen Version.
+* Die Beginners Guide soll ggf. besser strukturiert werden und die beiden Tutorials
+  in separate Dokumente ausgelagert werden.
 
 ## TODOs
 * Finale Illustrationen -> Remo?
