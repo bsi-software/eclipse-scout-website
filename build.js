@@ -21,9 +21,13 @@ const JS_SRC_DIR = './js/';
 const PAGES = [
   {url: '/', filename: 'index.html'},
   {url: '/versions', filename: 'versions.html'},
-  {url: '/features', filename: 'features.html'}
+  {url: '/features', filename: 'features.html'},
+  {url: '/css/styles.css', filename: 'css/styles.css'}
 ];
 
+/**
+ * Export Pages built with Handlebars and LESS as plain static HTML and CSS files.
+ */
 function exportFromExpressServer() {
   return new Promise((resolve, reject) => {
     let numExportedPages = 0;

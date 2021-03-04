@@ -10,7 +10,8 @@
   "author": "André Wegmüller, BSI",
   "scripts": {
     "build": "node build.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:dist": "node server-dist.js"
   },
   "babel": {
     "presets": [
