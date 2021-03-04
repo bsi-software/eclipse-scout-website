@@ -9,12 +9,20 @@
   "license": "",
   "author": "André Wegmüller, BSI",
   "scripts": {
-    "build": "echo \"Error: implement build\" && exit 1",
-    "dev:server": "node server.js",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "fs-extra": "^9.1.0",
+    "node-wget": "^0.4.3"
   },
   "dependencies": {
     "express": "^4.17.1",

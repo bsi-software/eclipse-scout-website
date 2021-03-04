@@ -1,4 +1,7 @@
 /*
+ * This script is used for local development of the Scout homepage.
+ * It starts a local 'express' server.
+ *
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
@@ -13,7 +16,7 @@ const app = express();
  * version numbers in URLs, so the point to the correct Scout release.
  * @type {number}
  */
-const SCOUT_VERSION = 10;
+const SCOUT_VERSION = 11;
 const SCOUT_VERSION_STRING = SCOUT_VERSION + '.0';
 
 // Handlebars Variables
