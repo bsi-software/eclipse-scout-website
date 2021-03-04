@@ -1,7 +1,12 @@
 ## Launch Website
-* npm install
-* npm run dev:server
+* `npm install`
+* `npm run start`
 * Start http://localhost:8080/
+
+## Build
+* Lokalen Server starten `npm run start` (Port 8080)
+* Build starten `npm run build`
+* Gebaute statische Files in /dist Ordner testen `npm run start:dist` (Port 8081)
 
 
 ## Screenshots für Scout Homepage Erstellen
@@ -32,17 +37,21 @@
   in separate Dokumente ausgelagert werden.
 
 ## TODOs
-* Finale Illustrationen -> Remo?
-* Build implementieren, package.json aufräumen
-* Internet Explorer ggf. Error abfangen / Edge prüfen (Babel, ES5 transpile)
-* Finale englische Texte von Carmen übernehmen.
+* CodePen Pro upgraden/einbinden (editierbar)
+* Links zu Scout Docs finalisieren
 * Browser- und Device Tests
+* Deployment auf Eclipse Umgebung (GIT)
+----
 * Prio 2: Kleine (farbige) Animation für Raketentriebwerk --> ausprobieren
 * Phase 2: Github.io in die Homepage integrieren?
 * Phase 2: News/Blog in die Homepage integrieren? Mit Marketing klären
 
 
 ## Erledigt
+* Build implementieren, package.json aufräumen
+* Internet Explorer ggf. Error abfangen / Edge prüfen (Babel, ES5 transpile)
+* Finale englische Texte von Carmen übernehmen.
+* Finale Illustrationen -> Remo?
 * CGU: Neue Screenshots für Charts erstellen
 * Unbenutzte Ressourcen entfernen (nicht referenzierte Bilder)
 * BSH: 4 Icons im Footer aus Community Menu verwenden.

@@ -20,8 +20,8 @@ const JS_SRC_DIR = './js/';
 
 const PAGES = [
   {url: '/', filename: 'index.html'},
-  {url: '/versions', filename: 'versions.html'},
-  {url: '/features', filename: 'features.html'},
+  {url: '/versions.html', filename: 'versions.html'},
+  {url: '/features.html', filename: 'features.html'},
   {url: '/css/styles.css', filename: 'css/styles.css'}
 ];
 
@@ -59,6 +59,7 @@ function exportFromExpressServer() {
 
 function copyStaticFiles() {
   console.log('Copy static files to ' + DIST_DIR + '...');
+  // 1. Copy everything
   return Promise.all([
     copy('browserconfig.xml'),
     copy('favicon.ico'),
@@ -68,11 +69,30 @@ function copyStaticFiles() {
     copy('css'),
     copy('img'),
     copy('js')
-  ]);
+  ])
+    // 2. Clean-up unwanted files
+    .then(() => {
+      return unlink('css/styles.less');
+    });
 
   // Shortcut for an 1:1 copy to the DIST dir
   function copy(filename) {
     return fse.copy(filename, DIST_DIR + filename);
+  }
+
+  function unlink(filename) {
+    return new Promise((resolve, reject) => {
+      fs.unlink(DIST_DIR + filename, error => {
+        if (error) {
+          if (error.code === 'ENOENT') {
+            console.warn('File ' + DIST_DIR + filename + ' does not exist');
+          } else {
+            throw error;
+          }
+        }
+        resolve(true);
+      });
+    });
   }
 }
 

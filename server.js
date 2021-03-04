@@ -75,13 +75,13 @@ app.get('/', (req, res) => {
     home: true
   });
 });
-app.get('/features', (req, res) => {
+app.get('/features.html', (req, res) => {
   res.render('features', {
     title: 'Why you will love Eclipse Scout',
     layout: 'index'
   });
 });
-app.get('/versions', (req, res) => {
+app.get('/versions.html', (req, res) => {
   res.render('versions', {
     title: 'Eclipse Scout Versions',
     layout: 'index'
