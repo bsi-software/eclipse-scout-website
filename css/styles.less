@@ -997,6 +997,12 @@ footer {
       border-style: solid;
       border-color: transparent transparent @palette-black transparent;
     }
+    &.adjust-left::after {
+      left: 15%;
+    }
+    &.adjust-right::after {
+      left: 85%;
+    }
   }
 
   &:hover > .tooltip-text {
@@ -1575,6 +1581,7 @@ footer {
 
     & > tbody {
       width: 100%;
+      display: block;
     }
 
     & tr {

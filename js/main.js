@@ -1,6 +1,8 @@
+const TOOLTIP_MIN_MARGIN = 10;
+
 const TEXTS = {
-  'scout.js': 'Scout JS applications are written in JavaScript. The business logic runs in the browser. An application server' +
-    ' is optional.',
+  'scout.js': 'Scout JS applications are written in JavaScript and run in the browser.' +
+    ' An application server is optional.',
   'scout.classic': 'Scout Classic applications are written in Java. They implement the client/server principle. The business logic' +
     ' runs on a Java application server.'
 };
@@ -74,14 +76,37 @@ function onGetStartedButtonClick() {
 function onTooltipMouseover(event) {
   let $tooltip = $(event.currentTarget);
   let tooltipTextKey = $tooltip.data('tooltipText');
+  let availWidth = $(document).width(); // must happen before tooltip is made visible
 
+  let $tooltipText = $tooltip.find('.tooltip-text');
   if (!$tooltip.find('.tooltip-text').length) {
     let tooltipText = TEXTS[tooltipTextKey];
     if (!tooltipText) {
       tooltipText = 'Undefined textKey "' + tooltipTextKey + '"';
     }
-    let $tooltipText = $('<span>').addClass('tooltip-text').text(tooltipText);
+    $tooltipText = $('<span>').addClass('tooltip-text').text(tooltipText);
     $tooltipText.appendTo($tooltip);
+  }
+
+  // adjust tooltip position
+  $tooltipText.removeClass('adjust-left adjust-right');
+  let position = $tooltipText.offset();
+  let width = $tooltipText.outerWidth();
+  let x = position.left;
+  let diff;
+
+  if (x < 0) {
+    // left boundaries crossed?
+    diff = Math.abs(x);
+    let marginLeft = parseInt($tooltipText.css('margin-left'), 10);
+    $tooltipText.css('margin-left', marginLeft + diff + TOOLTIP_MIN_MARGIN)
+      .addClass('adjust-left');
+  } else if ((x + width) > availWidth) {
+    // right boundaries crossed?
+    diff = (x + width) - availWidth;
+    let marginLeft = parseInt($tooltipText.css('margin-left'), 10);
+    $tooltipText.css('margin-left', marginLeft - diff - TOOLTIP_MIN_MARGIN)
+      .addClass('adjust-right');
   }
 }
 
