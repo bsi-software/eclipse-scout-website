@@ -30,7 +30,7 @@ app.locals = {
       appContacts: 'https://scout.bsi-software.com/contacts/',
       appScoutClassicWidgets: 'https://scout.bsi-software.com/widgets/',
       appScoutJsWidgets: 'https://scout.bsi-software.com/jswidgets/',
-      home: 'https://scout.bsi-software.com/',
+      home: 'https://www.bsi-software.com/en',
       scoutBlog: 'https://www.bsi-software.com/en/scout-blog'
     },
     docs: {
