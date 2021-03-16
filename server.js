@@ -65,6 +65,7 @@ app.engine('hbs', handlebars({
 app.use('/css', less(__dirname + '/css', {debug: true}));
 
 // Static Resources
+app.use('/manifest.json', express.static(__dirname + '/manifest.json'));
 app.use('/favicon.ico', express.static(__dirname + '/favicon.ico'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/img', express.static(__dirname + '/img'));
