@@ -133,7 +133,7 @@ body {
 
   // Required in mobile mode to disable scrolling when navigation panel is open
   &.fixed {
-    overflow-y: hidden;
+    overflow: hidden;
   }
 }
 
@@ -1034,8 +1034,8 @@ footer {
 }
 
 /* >= 1000px: desktop mode
-   >= 850 and < 1000px: make logo smaller, desktop or tablet mode
-   < 850px: mobile mode: re-order items, change navigation
+   >= 750 and < 1000px: make logo smaller, desktop or tablet mode
+   < 750px: mobile mode: re-order items, change navigation
  */
 
 /* ---- Smaller Desktop Mode ---- */
@@ -1149,7 +1149,7 @@ footer {
 }
 
 /* ==== MOBILE MODE ==== */
-@media screen and (max-width: 849px) {
+@media screen and (max-width: 749px) {
   .desktop-only {
     display: none !important;
   }
