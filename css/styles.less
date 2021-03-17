@@ -103,6 +103,12 @@
   }
 }
 
+// Required on desktop, so we have always a vertical scrollbar, even on pages
+// with few content to avoid visual "jumps" when switching between pages.
+.filler {
+  min-height: 440px;
+}
+
 /* ==========================================================================
    Website styles.
    ========================================================================== */
@@ -921,6 +927,16 @@ footer {
   }
 }
 
+#older-versions-info {
+  font-size: @font-size-medium;
+  text-align: center;
+  margin: 35px 0;
+
+  & > a:visited {
+    color: @palette-blue;
+  }
+}
+
 .version-marker {
   text-transform: uppercase;
   font-weight: bold;
@@ -937,12 +953,6 @@ footer {
   font-size: @font-size-medium;
   border-collapse: collapse;
   margin: auto;
-
-  // Required so we have always a vertical scrollbar, even on pages with few content
-  // to avoid visual "jumps" when switching between pages.
-  &.filler {
-    margin-bottom: 265px;
-  }
 
   td {
     border-bottom: solid 1px @palette-lighter-gray;
@@ -974,7 +984,7 @@ footer {
   border-bottom: 1px dashed @palette-black;
 
   & > .tooltip-text {
-    visibility: hidden;
+    display: none;
     width: 250px;
     background-color: @palette-black;
     color: @palette-white;
@@ -987,7 +997,10 @@ footer {
     left: 50%;
     margin-left: -125px;
     font-size: @font-size-medium;
-    #drop-shadow-hard();
+    // Don't use the #drop-shadow-hard mixin here, because 'filter' causes display issues on Mac computers
+    // for the tooltip. In other cases filter is required for SVG elements, where box-shadow does not
+    // work for round shapes.
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 
     &::after {
       content: '';
@@ -1010,7 +1023,7 @@ footer {
   // See main.js #onTooltipEvent for details on IOs handling
   &:hover:not(.ios) > .tooltip-text,
   &.hover.ios > .tooltip-text {
-    visibility: visible;
+    display: block;
   }
 
   &.inverted {
@@ -1159,6 +1172,9 @@ footer {
   }
   .mobile-only {
     display: block;
+  }
+  .filler {
+    min-height: auto;
   }
 
   body {
