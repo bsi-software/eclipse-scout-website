@@ -938,8 +938,10 @@ footer {
   border-collapse: collapse;
   margin: auto;
 
+  // Required so we have always a vertical scrollbar, even on pages with few content
+  // to avoid visual "jumps" when switching between pages.
   &.filler {
-    margin-bottom: 200px;
+    margin-bottom: 265px;
   }
 
   td {
@@ -1005,7 +1007,9 @@ footer {
     }
   }
 
-  &:hover > .tooltip-text {
+  // See main.js #onTooltipEvent for details on IOs handling
+  &:hover:not(.ios) > .tooltip-text,
+  &.hover.ios > .tooltip-text {
     visibility: visible;
   }
 

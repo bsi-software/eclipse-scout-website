@@ -53,7 +53,7 @@ function navigateToGetStarted() {
   let $panel = $('#getting-started-panel');
   if ($panel.length) {
     // Only exists on index page
-    $('#getting-started-panel')[0].scrollIntoView({
+    $panel[0].scrollIntoView({
       behavior: 'smooth'
     });
   } else {
@@ -71,21 +71,43 @@ function onGetStartedButtonClick() {
 }
 
 /**
- * Create the additional tooltip DIV only once. The rest is done with CSS only.
+ * Handles the tooltip hover or click events. By default the tooltips are built CSS
+ * only using the hover state of the link. But since this doesn't work on iOS devices
+ * this function works with click events on these devices. There we set a 'hover' class
+ * on click instead on relying on the :hover state of the element.
+ * <p>
+ * Creates the additional tooltip DIV only once.
+ * </p>
  */
-function onTooltipMouseover(event) {
+function onTooltipEvent(event) {
   let $tooltip = $(event.currentTarget);
   let tooltipTextKey = $tooltip.data('tooltipText');
   let availWidth = $(document).width(); // must happen before tooltip is made visible
 
+  // create tooltip text once
   let $tooltipText = $tooltip.find('.tooltip-text');
-  if (!$tooltip.find('.tooltip-text').length) {
+  if (!$tooltipText.length) {
     let tooltipText = TEXTS[tooltipTextKey];
     if (!tooltipText) {
       tooltipText = 'Undefined textKey "' + tooltipTextKey + '"';
     }
     $tooltipText = $('<span>').addClass('tooltip-text').text(tooltipText);
     $tooltipText.appendTo($tooltip);
+    let clickOutsideHandler = clickOutsideTooltipHandler.bind($tooltip);
+    $tooltip.data('clickOutsideHandler', clickOutsideHandler);
+  }
+
+  // click handling instead :hover state, for iOS devices
+  if (event.type === 'click') {
+    $tooltip.toggleClass('hover');
+    let showTooltip = $tooltip.hasClass('hover');
+    if (showTooltip) {
+      setTimeout(() => {
+        $(document).on('click', $tooltip.data('clickOutsideHandler'));
+      });
+    } else {
+      hideTooltip($tooltip);
+    }
   }
 
   // adjust tooltip position
@@ -110,12 +132,29 @@ function onTooltipMouseover(event) {
   }
 }
 
+function clickOutsideTooltipHandler(event) {
+  let $tooltip = this;
+  let $tooltipText = $tooltip.find('.tooltip-text');
+  if (event.target !== $tooltipText[0]) {
+    hideTooltip($tooltip);
+  }
+}
+
+function hideTooltip($tooltip) {
+  $tooltip.removeClass('hover');
+  $(document).off('click', $tooltip.data('clickOutsideHandler'));
+}
+
 function installHandlers() {
   $('#get-started-button').on('click', onGetStartedButtonClick);
   $('#mobile-navigation-button').on('click', onMobileNavigationButtonClick);
   $('.navigation-item.lv1 > .text').on('click', onNavigationItemLv1Click);
   $('.demo-app-button').on('click', onDemoAppButtonClick);
-  $('.tooltip').one('mouseover', onTooltipMouseover);
+  if (isIOs()) {
+    $('.tooltip').on('click', onTooltipEvent);
+  } else {
+    $('.tooltip').one('mouseover', onTooltipEvent);
+  }
 }
 
 function onNavigationItemLv1Click(event) {
@@ -239,8 +278,31 @@ function isMobileMode() {
   return content && content.indexOf('mobile') > -1;
 }
 
+/**
+ * Add 'ios' class to certain elements which require different handling on iOS devices.
+ */
+function prepareDomForIOs() {
+  if (isIOs()) {
+    $('.tooltip').addClass('ios');
+  }
+}
+
+function isIOs() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform) ||
+  // iPad on iOS 13 detection
+  (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+}
+
 $(document).ready(() => {
   $('<div>').attr('id', 'device-detection').appendTo($('body'));
+  prepareDomForIOs();
   installHandlers();
   hideAllDesktopNavigationPanelsLv2();
 });
