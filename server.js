@@ -19,7 +19,8 @@ const app = express();
  */
 const SCOUT_VERSION = 11;
 const SCOUT_VERSION_STRING = SCOUT_VERSION + '.0';
-const GITHUB_IO_ROOT = 'https://eclipsescout.github.io/' + SCOUT_VERSION_STRING + '/';
+const GITHUB_IO_ROOT = 'https://eclipsescout.github.io/';
+const GITHUB_IO_VERSION_ROOT = GITHUB_IO_ROOT + SCOUT_VERSION_STRING + '/';
 
 // Handlebars Variables
 app.locals = {
@@ -36,9 +37,9 @@ app.locals = {
     },
     docs: {
       home: GITHUB_IO_ROOT,
-      getStarted: GITHUB_IO_ROOT + 'getstarted.html',
-      helloScoutClassic: GITHUB_IO_ROOT + 'helloscout.html',
-      helloScoutJs: GITHUB_IO_ROOT + 'helloscout-js.html'
+      getStarted: GITHUB_IO_VERSION_ROOT + 'getstarted.html',
+      helloScoutClassic: GITHUB_IO_VERSION_ROOT + 'helloscout.html',
+      helloScoutJs: GITHUB_IO_VERSION_ROOT + 'helloscout-js.html'
     },
     eclipse: {
       bugzilla: 'https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=RESOLVED&bug_status=VERIFIED&columnlist=bug_id%2Cbug_severity%2Cpriority%2Ctarget_milestone%2Cbug_status%2Cresolution%2Ccomponent%2Cassigned_to%2Cshort_desc&list_id=10272285&product=Scout&query_format=advanced',
