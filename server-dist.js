@@ -6,10 +6,14 @@
  * http://www.bsiag.com/
  */
 const PORT = 8089;
+const ROOT_DIR = '/scout/';
 const express = require('express');
 const app = express();
 
-app.use('/', express.static(__dirname + '/dist'));
+app.use(ROOT_DIR, express.static(__dirname + '/dist'));
 
 // Launch Server
-app.listen(PORT, () => console.log(`App listening to port ${PORT}`));
+app.listen(PORT, () => {
+  console.log('Serving files from /dist directory');
+  console.log('http://localhost:' + PORT + ROOT_DIR);
+});

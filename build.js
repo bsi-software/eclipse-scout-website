@@ -14,7 +14,7 @@ const fs = require('fs');
 const fse = require('fs-extra');
 const babel = require('@babel/core');
 
-const SERVER_ROOT = 'http://localhost:8080';
+const SERVER_ROOT = 'http://localhost:8080/scout';
 const DIST_DIR = './dist/';
 const JS_SRC_DIR = './js/';
 

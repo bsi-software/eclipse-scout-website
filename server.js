@@ -6,6 +6,7 @@
  * http://www.bsiag.com/
  */
 const PORT = 8080;
+const ROOT_DIR = '/scout/';
 const express = require('express');
 const handlebars = require('express-handlebars');
 const less = require('express-less');
@@ -62,30 +63,30 @@ app.engine('hbs', handlebars({
 }));
 
 // Less Compiler
-app.use('/css', less(__dirname + '/css', {debug: true}));
+app.use(ROOT_DIR + 'css', less(__dirname + '/css', {debug: true}));
 
 // Static Resources
-app.use('/manifest.json', express.static(__dirname + '/manifest.json'));
-app.use('/favicon.ico', express.static(__dirname + '/favicon.ico'));
-app.use('/css', express.static(__dirname + '/css'));
-app.use('/img', express.static(__dirname + '/img'));
-app.use('/js', express.static(__dirname + '/js'));
+app.use(ROOT_DIR + 'manifest.json', express.static(__dirname + '/manifest.json'));
+app.use(ROOT_DIR + 'favicon.ico', express.static(__dirname + '/favicon.ico'));
+app.use(ROOT_DIR + 'css', express.static(__dirname + '/css'));
+app.use(ROOT_DIR + 'img', express.static(__dirname + '/img'));
+app.use(ROOT_DIR + 'js', express.static(__dirname + '/js'));
 
 // Pages
-app.get('/', (req, res) => {
+app.get(ROOT_DIR, (req, res) => {
   res.render('home', {
     layout: 'index',
     title: 'Eclipse Scout - A one-stop framework to develop professional business applications',
     home: true
   });
 });
-app.get('/features.html', (req, res) => {
+app.get(ROOT_DIR + 'features.html', (req, res) => {
   res.render('features', {
     title: 'Why you will love Eclipse Scout',
     layout: 'index'
   });
 });
-app.get('/versions.html', (req, res) => {
+app.get(ROOT_DIR + 'versions.html', (req, res) => {
   res.render('versions', {
     title: 'Eclipse Scout Versions',
     layout: 'index'
@@ -93,4 +94,7 @@ app.get('/versions.html', (req, res) => {
 });
 
 // Launch Server
-app.listen(PORT, () => console.log(`App listening to port ${PORT}`));
+app.listen(PORT, () => {
+  console.log('Development server started');
+  console.log('http://localhost:' + PORT + ROOT_DIR);
+});
