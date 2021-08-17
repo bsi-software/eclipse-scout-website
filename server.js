@@ -51,7 +51,7 @@ app.locals = {
       termsOfUse: 'http://www.eclipse.org/legal/termsofuse.php',
       wikipedia: 'https://de.wikipedia.org/wiki/Eclipse_Foundation'
     },
-    gitHub: 'https://github.com/eclipse/scout.rt/tree/releases/' + SCOUT_VERSION_STRING + '/',
+    gitHub: 'https://github.com/eclipse-scout/scout.rt/tree/releases/' + SCOUT_VERSION_STRING + '/',
     stackOverflow: 'https://stackoverflow.com/tags/eclipse-scout'
   }
 };
