@@ -15,19 +15,12 @@ bemerkt werden.
 
 ## Screenshots für Scout Homepage Erstellen
 * Chrome verwenden
-* Outline-Tree mit D&D so einstellen, dass er genau 261px breit ist
-  (im DOM Inspector verifizieren)
+* Outline-Tree mit D&D so einstellen, dass er genau 260px breit ist (im DOM Inspector verifizieren)
 * Unnötige Nodes zuklappen
-* Chrome Window mit "Sizer" Tool auf 1280 x 960 resizen
-* Screenshot von Chrome Window machen (Alt + Print Screen)
-* In GIMP pasten. Ränder beschneiden. 1 Pixel Rahmen von Chrome
-  darf nicht Teil vom Bild sein.
-* Zielgrösse: 1278 x 859 Pixel
-* Scrollbars entfernen / übermalen
-* Outline-Selector Button oben links mit blau übermalen
-* Angeschnittene Texte in der Outline mit blau übermalen
-* Fertiges Bild kopieren / auf 800 x 538 skalieren
-* Als PNG speichern
+* Chrome Mobile-Emulator öffnen, auf Responsive stellen und 960 x 645 einstellen
+* Scrollbars entfernen ($('.scrollbar').remove()), Username ändern
+* Beim 3-Punkte-Menü rechts oben Capture Screenshot klicken
+* Bild auf 1280 x 860 skalieren um Datei-Grösse zu reduzieren (Windows-Explorer, Rechtsklick, Resize pictures)
 
 ## Github.io
 * Die Doku bleibt vorerst auf Github.io. Wir gleichen aber den Look an die
