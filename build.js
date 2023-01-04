@@ -29,6 +29,9 @@ const PAGES = [
  * Export Pages built with Handlebars and LESS as plain static HTML and CSS files.
  */
 function exportFromExpressServer() {
+  ensureFolderExists(DIST_DIR);
+  ensureFolderExists(DIST_DIR + '/css');
+
   return new Promise((resolve, reject) => {
     let numExportedPages = 0;
 
@@ -108,6 +111,12 @@ function transpileES6Files() {
         });
       });
     });
+}
+
+function ensureFolderExists(folder) {
+  if (!fs.existsSync(folder)) {
+    fs.mkdirSync(folder)
+  }
 }
 
 // ---- MAIN

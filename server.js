@@ -17,8 +17,8 @@ const app = express();
  * version numbers in URLs, so the point to the correct Scout release.
  * @type {number}
  */
-const SCOUT_VERSION = 22;
-const SCOUT_VERSION_STRING = SCOUT_VERSION + '.0';
+const SCOUT_VERSION = 23;
+const SCOUT_VERSION_STRING = SCOUT_VERSION + '.1';
 const GITHUB_IO_ROOT = 'https://eclipsescout.github.io/';
 const GITHUB_IO_VERSION_ROOT = GITHUB_IO_ROOT + SCOUT_VERSION_STRING + '/';
 

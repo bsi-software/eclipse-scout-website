@@ -13,7 +13,7 @@ bemerkt werden.
 * Gebaute statische Files in /dist Ordner testen `npm run start:dist` (Port 8081)
 
 
-## Screenshots für Scout Homepage Erstellen
+## Screenshots für Scout Homepage erstellen
 * Chrome verwenden
 * Outline-Tree mit D&D so einstellen, dass er genau 260px breit ist (im DOM Inspector verifizieren)
 * Unnötige Nodes zuklappen
@@ -22,13 +22,6 @@ bemerkt werden.
 * Beim 3-Punkte-Menü rechts oben Capture Screenshot klicken
 * Bild auf 1280 x 860 skalieren um Datei-Grösse zu reduzieren (Windows-Explorer, Rechtsklick, Resize pictures)
 
-## Github.io
-* Die Doku bleibt vorerst auf Github.io. Wir gleichen aber den Look an die
-  neue Scout Homepage an.
-* Die Startseite auf Github.io hat nur noch einen Intro-Text, eine Illustration
-  und eine Tabelle mit den Scout Versionen. Klickt man auf einen Link in dieser
-  Tabelle kommt man zur Doku für diese Version.
-* Bei älteren Versionen der Doku soll im Header ein Hinweis angezeigt werden, dass
-  dies nicht mehr die aktuelle Version ist und einen Link zur aktuellen Version.
-* Die Beginners Guide soll ggf. besser strukturiert werden und die beiden Tutorials
-  in separate Dokumente ausgelagert werden.
+## Update auf eine neue Version
+* Version-Tabelle anpassen in versions.hbs (nicht mehr als 3 Versionen auflisten)
+* Variablen in server.js anpassen
