@@ -18,7 +18,7 @@ const app = express();
  * @type {number}
  */
 const SCOUT_VERSION = 23;
-const SCOUT_VERSION_STRING = SCOUT_VERSION + '.1';
+const SCOUT_VERSION_STRING = SCOUT_VERSION + '.2';
 const GITHUB_IO_ROOT = 'https://eclipsescout.github.io/';
 const GITHUB_IO_VERSION_ROOT = GITHUB_IO_ROOT + SCOUT_VERSION_STRING + '/';
 
