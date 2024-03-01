@@ -66,7 +66,7 @@ function copyStaticFiles() {
   return Promise.all([
     copy('browserconfig.xml'),
     copy('favicon.ico'),
-    copy('LICENSE.txt'),
+    copy('LICENSE'),
     copy('manifest.json'),
     copy('robots.txt'),
     copy('css'),
