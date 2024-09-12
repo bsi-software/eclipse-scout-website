@@ -1,16 +1,16 @@
 ## Launch Website
 * `npm install`
 * `npm run start`
-* Start http://localhost:8080/scout/
+* Start http://localhost:8095/scout/
 
 Wir verwenden absichtlich einen Kontextpfad, damit man lokal die gleiche Ausgangslage wie
 auf der deployten Homepage hat und Fehler bei relativen Referenzen beim lokalen Testen
 bemerkt werden.
 
 ## Build
-* Lokalen Server starten `npm run start` (Port 8080)
+* Lokalen Server starten `npm run start` (Port 8095)
 * Build starten `npm run build`
-* Gebaute statische Files in /dist Ordner testen `npm run start:dist` (Port 8081)
+* Gebaute statische Files in /dist Ordner testen `npm run start:dist` (Port 8096)
 
 
 ## Screenshots für Scout Homepage erstellen

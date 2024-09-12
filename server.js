@@ -5,7 +5,7 @@
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
-const PORT = 8080;
+const PORT = 8095;
 const ROOT_DIR = '/scout/';
 const express = require('express');
 const handlebars = require('express-handlebars');
@@ -18,7 +18,7 @@ const app = express();
  * @type {number}
  */
 const SCOUT_VERSION = 24;
-const SCOUT_VERSION_STRING = SCOUT_VERSION + '.1';
+const SCOUT_VERSION_STRING = SCOUT_VERSION + '.2';
 const GITHUB_IO_ROOT = 'https://eclipsescout.github.io/';
 const GITHUB_IO_VERSION_ROOT = GITHUB_IO_ROOT + 'scout-docs/' + SCOUT_VERSION_STRING + '/';
 

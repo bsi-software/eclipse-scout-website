@@ -5,7 +5,7 @@
  * Copyright (c) BSI Business Systems Integration AG. All rights reserved.
  * http://www.bsiag.com/
  */
-const PORT = 8089;
+const PORT = 8096;
 const ROOT_DIR = '/scout/';
 const express = require('express');
 const app = express();
