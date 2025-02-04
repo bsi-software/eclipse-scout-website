@@ -48,7 +48,6 @@ app.locals = {
       legal: 'http://www.eclipse.org/legal',
       privacyPolicy: 'http://www.eclipse.org/legal/privacy.php',
       project: 'https://projects.eclipse.org/projects/technology.scout',
-      scoutForum: 'https://www.eclipse.org/forums/index.php?t=thread&frm_id=174',
       termsOfUse: 'http://www.eclipse.org/legal/termsofuse.php',
       wikipedia: 'https://de.wikipedia.org/wiki/Eclipse_Foundation'
     },
