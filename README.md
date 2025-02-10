@@ -23,5 +23,9 @@ bemerkt werden.
 * Bild auf 1280 x 860 skalieren um Datei-Grösse zu reduzieren (Windows-Explorer, Rechtsklick, Resize pictures)
 
 ## Update auf eine neue Version
-* Version-Tabelle anpassen in versions.hbs (nicht mehr als 3 Versionen auflisten)
-* Variablen in server.js anpassen
+* Versions-Tabelle anpassen in versions.hbs
+  * Neue Version einfügen
+  * Wenn die neue Version eine x.1-Version ist -> LATEST
+  * Wenn die neue Version eine x.2-Version ist -> LATEST LTS
+  * Überprüfen, ob bei einer älteren x.2-Version LTS entfernt werden muss
+* Variablen SCOUT_VERSION und SCOUT_VERSION_STRING in server.js anpassen

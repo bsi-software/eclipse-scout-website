@@ -936,6 +936,20 @@ footer {
   }
 }
 
+#release-info {
+  text-align: center;
+
+  & > h3 {
+    #title-font(@font-size-larger, @palette-black);
+  }
+
+  & > p {
+    font-size: @font-size-medium;
+    text-align: justify;
+    padding: 0 12.5%;
+  }
+}
+
 .version-marker {
   text-transform: uppercase;
   font-weight: bold;
@@ -1620,6 +1634,10 @@ footer {
         font-weight: bold;
       }
     }
+  }
+
+  #release-info > p {
+    padding: 0;
   }
 
   #device-detection::before {
