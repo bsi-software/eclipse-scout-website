@@ -8,7 +8,7 @@
 const PORT = 8095;
 const ROOT_DIR = '/scout/';
 const express = require('express');
-const handlebars = require('express-handlebars');
+const { engine } = require('express-handlebars');
 const less = require('express-less');
 const app = express();
 
@@ -58,7 +58,7 @@ app.locals = {
 
 // Set-up handlebars engine
 app.set('view engine', 'hbs');
-app.engine('hbs', handlebars({
+app.engine('hbs', engine({
   layoutsDir: __dirname + '/views/layouts',
   extname: 'hbs'
 }));
