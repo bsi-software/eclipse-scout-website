@@ -27,5 +27,5 @@ bemerkt werden.
   * Neue Version einfügen
   * Wenn die neue Version eine x.1-Version ist -> LATEST
   * Wenn die neue Version eine x.2-Version ist -> LATEST LTS
-  * Überprüfen, ob bei einer älteren x.2-Version LTS entfernt werden muss
+  * Sicherstellen, dass nur die zwei neusten x.2-er-Versionen LTS sind
 * Variablen SCOUT_VERSION und SCOUT_VERSION_STRING in server.js anpassen
